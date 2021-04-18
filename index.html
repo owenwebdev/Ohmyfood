@@ -1,14 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="restaurant reservation site">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="restaurant reservation site" />
     <title>Ohmyfood</title>
-    <link rel="stylesheet" href="/dist/css/style.css">
-</head>
-<body>
-    
-</body>
+    <link rel="stylesheet" href="/dist/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content"></div>
+    </header>
+
+    <main>
+      <section class="user-location">Paris, Belleville</section>
+
+      <section class="intro">
+        <h2 class="intro__heading">Book the menu you like</h2>
+        <h3 class="intro__subheading">
+          Discover top-of-the-art restaurants we picked for you
+        </h3>
+        <button class="intro__explore-button">Explore our restaurants</button>
+      </section>
+
+      <section class="instructions">
+        <h2 class="instructions__heading">How it works</h2>
+        <ol class="instructions__steps">
+          <li class="instructions__step">Choose a restaurant</li>
+          <li class="instructions__step">Create your menu</li>
+          <li class="instructions__step">Go enjoy it at the restaurant</li>
+        </ol>
+      </section>
+
+      <section class="restaurants">
+        <h2 class="restaurants__heading">Restaurants</h2>
+        <ul class="restaurants__list">
+          <li class="card">
+            <div class="card__photo"></div>
+            <div class="card__title">The Full Palette</div>
+            <div class="card__info">New York</div>
+            <div class="card__favourite"></div>
+          </li>
+          <li class="card">
+            <div class="card__photo"></div>
+            <div class="card__title">The Enchanted Plate</div>
+            <div class="card__info">New York</div>
+            <div class="card__favourite"></div>
+          </li>
+          <li class="card">
+            <div class="card__photo"></div>
+            <div class="card__title">Bastille</div>
+            <div class="card__info">New York</div>
+            <div class="card__favourite"></div>
+          </li>
+          <li class="card">
+            <div class="card__photo"></div>
+            <div class="card__title">Le Gourmand</div>
+            <div class="card__info">New York</div>
+            <div class="card__favourite"></div>
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__heading"></div>
+      <ul class="footer__links">
+        <li class="footer__link">
+          <a href="#">Suggest a restaurant</a>
+        </li>
+        <li class="footer__link">
+          <a href="#">Become a partner</a>
+        </li>
+        <li class="footer__link">
+          <a href="#">Legal</a>
+        </li>
+        <li class="footer__link">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
 </html>
