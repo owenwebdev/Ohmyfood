@@ -1,0 +1,104 @@
+$color-primary: #9356dc;
+$color-secondary: #ff79da;
+$color-tertiary: #99e2d0;
+
+$restaurants: (
+    "title": "The Full Palette",
+    "info": "New York",
+    "photo": "jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    "label": "New",
+  ),
+  (
+    "title": "The Enchanted Plate",
+    "info": "New York",
+    "photo": "stil-u2Lp8tXIcjw-unsplash.jpg",
+    "label": "New",
+  ),
+  (
+    "title": "The Full Palette",
+    "info": "New York",
+    "photo": "toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+  ),
+  (
+    "title": "The Full Palette",
+    "info": "New York",
+    "photo": "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+  );
+
+$restaurant-photos-directory: "/images/restaurants";
+
+@use "sass:list";
+@use "sass:map";
+
+@function restaurant-photo-url($filename) {
+  @return $restaurant-photos-directory + "/" + $filename;
+}
+
+@mixin card-class($index) {
+  .card#{$index} {
+    $restaurant: list.nth($restaurants, $index);
+
+    display: grid;
+    width: 16rem;
+    height: 12rem;
+    grid-template-areas:
+      "photo photo"
+      "title fav"
+      "info fav";
+    grid-template-columns: 1fr 2rem;
+    grid-template-rows: minmax(0, 1fr) 2rem 2rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+
+    &__photo {
+      grid-area: photo;
+      $photo-filename: map.get($restaurant, "photo");
+      $photo-url: restaurant-photo-url($photo-filename);
+      background-image: url($photo-url);
+      background-color: grey;
+      background-size: cover;
+    }
+
+    &__title {
+      grid-area: title;
+      &::before {
+        content: map.get($restaurant, "title");
+      }
+    }
+
+    &__info {
+      grid-area: info;
+      &::before {
+        content: map.get($restaurant, "info");
+      }
+    }
+
+    &__favourite {
+      grid-area: fav;
+      &::before {
+        content: "";
+      }
+    }
+
+    &__label {
+      $label: map.get($restaurant, "label");
+      @if $label {
+        display: inline-block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        padding: 0.5rem 1.5rem;
+        background: $color-tertiary;
+        &::before {
+          content: $label;
+        }
+      }
+    }
+  }
+}
+
+@for $i from 1 through length($restaurants) {
+  @include card-class($i);
+}

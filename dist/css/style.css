@@ -1,3 +1,170 @@
+.card1 {
+  display: grid;
+  width: 16rem;
+  height: 12rem;
+  grid-template-areas: "photo photo" "title fav" "info fav";
+  grid-template-columns: 1fr 2rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.card1__photo {
+  grid-area: photo;
+  background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-color: grey;
+  background-size: cover;
+}
+.card1__title {
+  grid-area: title;
+}
+.card1__title::before {
+  content: "The Full Palette";
+}
+.card1__info {
+  grid-area: info;
+}
+.card1__info::before {
+  content: "New York";
+}
+.card1__favourite {
+  grid-area: fav;
+}
+.card1__favourite::before {
+  content: "";
+}
+.card1__label {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #99e2d0;
+}
+.card1__label::before {
+  content: "New";
+}
 
+.card2 {
+  display: grid;
+  width: 16rem;
+  height: 12rem;
+  grid-template-areas: "photo photo" "title fav" "info fav";
+  grid-template-columns: 1fr 2rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.card2__photo {
+  grid-area: photo;
+  background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-color: grey;
+  background-size: cover;
+}
+.card2__title {
+  grid-area: title;
+}
+.card2__title::before {
+  content: "The Enchanted Plate";
+}
+.card2__info {
+  grid-area: info;
+}
+.card2__info::before {
+  content: "New York";
+}
+.card2__favourite {
+  grid-area: fav;
+}
+.card2__favourite::before {
+  content: "";
+}
+.card2__label {
+  display: inline-block;
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: #99e2d0;
+}
+.card2__label::before {
+  content: "New";
+}
+
+.card3 {
+  display: grid;
+  width: 16rem;
+  height: 12rem;
+  grid-template-areas: "photo photo" "title fav" "info fav";
+  grid-template-columns: 1fr 2rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.card3__photo {
+  grid-area: photo;
+  background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-color: grey;
+  background-size: cover;
+}
+.card3__title {
+  grid-area: title;
+}
+.card3__title::before {
+  content: "The Full Palette";
+}
+.card3__info {
+  grid-area: info;
+}
+.card3__info::before {
+  content: "New York";
+}
+.card3__favourite {
+  grid-area: fav;
+}
+.card3__favourite::before {
+  content: "";
+}
+.card4 {
+  display: grid;
+  width: 16rem;
+  height: 12rem;
+  grid-template-areas: "photo photo" "title fav" "info fav";
+  grid-template-columns: 1fr 2rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+}
+.card4__photo {
+  grid-area: photo;
+  background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-color: grey;
+  background-size: cover;
+}
+.card4__title {
+  grid-area: title;
+}
+.card4__title::before {
+  content: "The Full Palette";
+}
+.card4__info {
+  grid-area: info;
+}
+.card4__info::before {
+  content: "New York";
+}
+.card4__favourite {
+  grid-area: fav;
+}
+.card4__favourite::before {
+  content: "";
+}
 
 /*# sourceMappingURL=style.css.map */
