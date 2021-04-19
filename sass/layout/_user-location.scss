@@ -1,0 +1,12 @@
+@use "../abstracts/variables";
+@use "../abstracts/colors";
+
+.user-location {
+    display: flex;
+    height: variables.$header-height + 3rem;
+    padding-top: variables.$header-height;
+    justify-content: center;
+    align-items: center;
+    color: colors.$logo;
+    background: colors.$background3;
+}

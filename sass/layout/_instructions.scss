@@ -1,0 +1,61 @@
+@use "../abstracts/mixins";
+@use "../abstracts/colors";
+// @use "../abstracts/mixins";
+
+.instructions {
+//   height: 27.5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background: colors.$background1;
+
+  $marker-radius: 0.75rem;
+
+  //   &__list {
+  //   }
+
+  &__step {
+    position: relative;
+    left: $marker-radius;
+    height: 4.5rem;
+    width: calc(100% - #{$marker-radius});
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    background: colors.$background2;
+    @include mixins.rounded-corners;
+    @include mixins.shadow;
+    font-weight: 500;
+
+    &--highlighted {
+      background: colors.$primary-tint;
+    }
+  }
+
+  &__step-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: -$marker-radius;
+  }
+
+  &__step-marker {
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include mixins.circle($marker-radius * 2);
+    color: white;
+    background: colors.$primary;
+  }
+
+  &__step-icon {
+    text-align: center;
+    width: 4rem;
+    font-size: 1.3rem;
+    color: colors.$logo;
+    &--highlighted {
+      color: colors.$primary;
+    }
+  }
+}

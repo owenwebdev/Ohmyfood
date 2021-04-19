@@ -1,33 +1,33 @@
-@use "sass:list";
+// @use "sass:list";
 @use "sass:map";
 
 @use "../abstracts/variables";
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 @use "../base/typography";
 
 @function restaurant-photo-url($filename) {
   @return variables.$restaurant-photos-directory + "/" + $filename;
 }
 
-@mixin generate-card($index) {
-  $restaurant: list.nth(variables.$restaurants, $index);
+@mixin generate-card($index, $restaurant) {
+//   $restaurant: list.nth(variables.$restaurants, $index);
 
   .card#{$index} {
     display: grid;
-    width: 18rem;
     height: 14rem;
-    margin: 1rem;
+    margin: 1.25rem 0;
     grid-template-areas:
       "photo photo"
       "title fav"
       "info fav";
     grid-template-columns: 1fr 3rem;
     grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
-    border-radius: 1rem;
     overflow: hidden;
     position: relative;
     background: colors.$background1;
-    box-shadow: 0 0.25em 0.5em 0 #0001, 0 0.375em 1.25em 0 #0001;
+    @include mixins.rounded-corners;
+    @include mixins.shadow;
 
     &__photo {
       grid-area: photo;
@@ -61,7 +61,6 @@
       justify-self: center;
       &::before {
         @include typography.heart-unfilled
-        // content: "";
       }
     }
 
@@ -80,8 +79,4 @@
       }
     }
   }
-}
-
-@for $i from 1 through list.length(variables.$restaurants) {
-  @include generate-card($i);
 }

@@ -1,0 +1,17 @@
+@use "sass:list";
+@use "../abstracts/variables";
+@use "../components/card";
+
+.restaurants {
+  padding-top: 3rem;
+  padding-bottom: 2.75rem;
+
+  @for $i from 1 through list.length(variables.$restaurants) {
+    $restaurant: list.nth(variables.$restaurants, $i);
+    @include card.generate-card($i, $restaurant);
+  }
+
+  &__link {
+    color: #000;
+  }
+}

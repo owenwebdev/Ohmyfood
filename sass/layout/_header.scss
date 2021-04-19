@@ -1,0 +1,18 @@
+@use "../abstracts/variables";
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.header {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: variables.$header-height;
+    width: 100%;
+    padding-top: 1.4rem;
+    text-align: center;
+    background: colors.$background1;
+    @include mixins.shadow;
+    &__logo {
+        height: 1.75rem;
+    }
+}

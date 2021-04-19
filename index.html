@@ -14,34 +14,54 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__content"></div>
+      <img class="header__logo" src="images/logo/ohmyfood.png" alt="logo" />
     </header>
 
     <main>
-      <section class="user-location">Paris, Belleville</section>
+      <section class="user-location"><span class="fas fa-map-marker-alt"></span>&emsp;Paris, Belleville</section>
 
-      <section class="intro">
+      <section class="intro wrapper">
         <h2 class="intro__heading">Book the menu you like</h2>
         <h3 class="intro__subheading">
           Discover top-of-the-art restaurants we picked for you
         </h3>
-        <button class="intro__explore-button">Explore our restaurants</button>
+        <a class="intro__explore-link" href="#restaurants">Explore our restaurants</a>
       </section>
 
       <section class="instructions">
-        <h2 class="instructions__heading">How it works</h2>
-        <ol class="instructions__steps">
-          <li class="instructions__step">Choose a restaurant</li>
-          <li class="instructions__step">Create your menu</li>
-          <li class="instructions__step">Go enjoy it at the restaurant</li>
-        </ol>
+        <div class="wrapper">
+          <h2 class="instructions__heading">How it works</h2>
+          <ol class="instructions__list">
+            <li class="instructions__step">
+              <div class="instructions__step-content">
+                <div class="instructions__step-marker">1</div>
+                <div class="instructions__step-icon fas fa-mobile-alt"></div>
+                Choose a restaurant
+              </div>
+            </li>
+            <li class="instructions__step">
+              <div class="instructions__step-content">
+                <div class="instructions__step-marker">2</div>
+                <div class="instructions__step-icon fas fa-list"></div>
+                Create your menu
+              </div>
+            </li>
+            <li class="instructions__step instructions__step--highlighted">
+              <div class="instructions__step-content">
+                <div class="instructions__step-marker">3</div>
+                <div class="instructions__step-icon instructions__step-icon--highlighted fas fa-store"></div>
+                Go enjoy it at the restaurant
+              </div>
+            </li>
+          </ol>
+        </div>
       </section>
 
-      <section class="restaurants">
+      <section id="restaurants" class="restaurants wrapper">
         <h2 class="restaurants__heading">Restaurants</h2>
         <ul class="restaurants__list">
           <li>
-            <a href="card1.html">
+            <a class="restaurants__link" href="card1.html">
               <div class="card1">
                 <div class="card1__photo"></div>
                 <div class="card1__title"></div>
@@ -52,7 +72,7 @@
             </a>
           </li>
           <li>
-            <a href="card2.html">
+            <a class="restaurants__link" href="card2.html">
               <div class="card2">
                 <div class="card2__photo"></div>
                 <div class="card2__title"></div>
@@ -63,7 +83,7 @@
             </a>
           </li>
           <li>
-            <a href="card3.html">
+            <a class="restaurants__link" href="card3.html">
               <div class="card3">
                 <div class="card3__photo"></div>
                 <div class="card3__title"></div>
@@ -74,7 +94,7 @@
             </a>
           </li>
           <li>
-            <a href="card4.html">
+            <a class="restaurants__link" href="card4.html">
               <div class="card4">
                 <div class="card4__photo"></div>
                 <div class="card4__title"></div>
@@ -89,21 +109,29 @@
     </main>
 
     <footer class="footer">
-      <div class="footer__heading"></div>
-      <ul class="footer__links">
-        <li class="footer__link">
-          <a href="#"><i class="fas fa-utensils"></i>Suggest a restaurant</a>
-        </li>
-        <li class="footer__link">
-          <a href="#"><i class="fas fa-hands-helping"></i>Become a partner</a>
-        </li>
-        <li class="footer__link">
-          <a href="#">Legal</a>
-        </li>
-        <li class="footer__link">
-          <a href="#">Contact</a>
-        </li>
-      </ul>
+      <div class="wrapper">
+        <div class="footer__heading">
+            ohmyfood
+        </div>
+        <ul class="footer__links">
+          <li>
+            <a class="footer__link" href="#"
+              ><span class="footer__link-icon fas fa-utensils"></span>Suggest a restaurant</a
+            >
+          </li>
+          <li>
+            <a class="footer__link" href="#">
+              <span class="footer__link-icon fas fa-hands-helping"></span>Become a partner</a
+            >
+          </li>
+          <li>
+            <a class="footer__link" href="#">Legal</a>
+          </li>
+          <li>
+            <a class="footer__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
     </footer>
   </body>
 </html>

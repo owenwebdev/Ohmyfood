@@ -1,7 +1,23 @@
+@use "sass:color";
+
 $primary: #9356dc;
 $secondary: #ff79da;
 $tertiary: #99e2d0;
+$primary-tint: #F5EDFF;
+$logo: #353535;
 $background1: #fff;
 $background2: #f6f6f6;
 $background3: #eaeaea;
-$background4: #353535;
+$background4: $logo;
+
+$gradient-primary-secondary: linear-gradient($primary, $secondary);
+$gradient-secondary-primary: linear-gradient($secondary, $primary);
+
+@function max-contrast($color) {
+  // if $color is dark then return white
+  // else return black
+  @if (color.lightness($color) < 50%) {
+    @return #fff;
+  }
+  @return #000;
+}

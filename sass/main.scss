@@ -3,6 +3,7 @@
 
 @use "abstracts/colors";
 
-@use "components/card";
-
 @use "layout/body";
+@use "layout/wrapper";
+
+@use "pages/home.scss";
