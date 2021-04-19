@@ -1,0 +1,31 @@
+$breakpoints: (
+  "small": "(min-width: 320px)",
+  "medium": "(min-width: 800px)",
+  "large": "(min-width: 1000px)",
+  "huge": "(min-width: 1200px)",
+);
+
+$restaurants: (
+    "title": "The Full Palette",
+    "info": "New York",
+    "photo": "jay-wennington-N_Y88TWmGwA-unsplash.jpg",
+    "label": "New",
+  ),
+  (
+    "title": "The Enchanted Plate",
+    "info": "New York",
+    "photo": "stil-u2Lp8tXIcjw-unsplash.jpg",
+    "label": "New",
+  ),
+  (
+    "title": "Bastille",
+    "info": "New York",
+    "photo": "toa-heftiba-DQKerTsQwi0-unsplash.jpg",
+  ),
+  (
+    "title": "Le Gourmand",
+    "info": "New York",
+    "photo": "louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg",
+  );
+
+$restaurant-photos-directory: "/images/restaurants";

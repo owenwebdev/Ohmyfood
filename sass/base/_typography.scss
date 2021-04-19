@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin heart-unfilled {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+}
+
+@mixin heart-filled {
+  content: "\f004";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+}

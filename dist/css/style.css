@@ -1,38 +1,60 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
 .card1 {
   display: grid;
-  width: 16rem;
-  height: 12rem;
+  width: 18rem;
+  height: 14rem;
+  margin: 1rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
-  grid-template-columns: 1fr 2rem;
-  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
-  border: 2px solid black;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  box-shadow: 0 0.25em 0.5em 0 #0001, 0 0.375em 1.25em 0 #0001;
 }
 .card1__photo {
   grid-area: photo;
   background-image: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-  background-color: grey;
+  background-color: #eaeaea;
   background-size: cover;
 }
 .card1__title {
   grid-area: title;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  align-self: end;
 }
 .card1__title::before {
   content: "The Full Palette";
 }
 .card1__info {
   grid-area: info;
+  padding: 0.3rem 0.5rem 0 0.5rem;
 }
 .card1__info::before {
   content: "New York";
 }
 .card1__favourite {
   grid-area: fav;
+  align-self: center;
+  justify-self: center;
 }
 .card1__favourite::before {
-  content: "";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
 }
 .card1__label {
   display: inline-block;
@@ -48,39 +70,49 @@
 
 .card2 {
   display: grid;
-  width: 16rem;
-  height: 12rem;
+  width: 18rem;
+  height: 14rem;
+  margin: 1rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
-  grid-template-columns: 1fr 2rem;
-  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
-  border: 2px solid black;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  box-shadow: 0 0.25em 0.5em 0 #0001, 0 0.375em 1.25em 0 #0001;
 }
 .card2__photo {
   grid-area: photo;
   background-image: url("/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-  background-color: grey;
+  background-color: #eaeaea;
   background-size: cover;
 }
 .card2__title {
   grid-area: title;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  align-self: end;
 }
 .card2__title::before {
   content: "The Enchanted Plate";
 }
 .card2__info {
   grid-area: info;
+  padding: 0.3rem 0.5rem 0 0.5rem;
 }
 .card2__info::before {
   content: "New York";
 }
 .card2__favourite {
   grid-area: fav;
+  align-self: center;
+  justify-self: center;
 }
 .card2__favourite::before {
-  content: "";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
 }
 .card2__label {
   display: inline-block;
@@ -96,75 +128,98 @@
 
 .card3 {
   display: grid;
-  width: 16rem;
-  height: 12rem;
+  width: 18rem;
+  height: 14rem;
+  margin: 1rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
-  grid-template-columns: 1fr 2rem;
-  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
-  border: 2px solid black;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  box-shadow: 0 0.25em 0.5em 0 #0001, 0 0.375em 1.25em 0 #0001;
 }
 .card3__photo {
   grid-area: photo;
   background-image: url("/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-  background-color: grey;
+  background-color: #eaeaea;
   background-size: cover;
 }
 .card3__title {
   grid-area: title;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  align-self: end;
 }
 .card3__title::before {
-  content: "The Full Palette";
+  content: "Bastille";
 }
 .card3__info {
   grid-area: info;
+  padding: 0.3rem 0.5rem 0 0.5rem;
 }
 .card3__info::before {
   content: "New York";
 }
 .card3__favourite {
   grid-area: fav;
+  align-self: center;
+  justify-self: center;
 }
 .card3__favourite::before {
-  content: "";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
 }
 .card4 {
   display: grid;
-  width: 16rem;
-  height: 12rem;
+  width: 18rem;
+  height: 14rem;
+  margin: 1rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
-  grid-template-columns: 1fr 2rem;
-  grid-template-rows: minmax(0, 1fr) 2rem 2rem;
-  border: 2px solid black;
+  grid-template-columns: 1fr 3rem;
+  grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
   border-radius: 1rem;
   overflow: hidden;
   position: relative;
+  background: #fff;
+  box-shadow: 0 0.25em 0.5em 0 #0001, 0 0.375em 1.25em 0 #0001;
 }
 .card4__photo {
   grid-area: photo;
   background-image: url("/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-  background-color: grey;
+  background-color: #eaeaea;
   background-size: cover;
 }
 .card4__title {
   grid-area: title;
+  padding: 0rem 0.5rem 0rem 0.5rem;
+  align-self: end;
 }
 .card4__title::before {
-  content: "The Full Palette";
+  content: "Le Gourmand";
 }
 .card4__info {
   grid-area: info;
+  padding: 0.3rem 0.5rem 0 0.5rem;
 }
 .card4__info::before {
   content: "New York";
 }
 .card4__favourite {
   grid-area: fav;
+  align-self: center;
+  justify-self: center;
 }
 .card4__favourite::before {
-  content: "";
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+}
+body {
+  background: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */
