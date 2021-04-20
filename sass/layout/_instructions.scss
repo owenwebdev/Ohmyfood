@@ -3,7 +3,7 @@
 // @use "../abstracts/mixins";
 
 .instructions {
-//   height: 27.5rem;
+  //   height: 27.5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background: colors.$background1;
@@ -24,7 +24,7 @@
     margin-bottom: 1rem;
     background: colors.$background2;
     @include mixins.rounded-corners;
-    @include mixins.shadow;
+    @include mixins.shadow-soft-light;
     font-weight: 500;
 
     &--highlighted {
@@ -33,17 +33,14 @@
   }
 
   &__step-content {
-    display: flex;
-    align-items: center;
+    @include mixins.flex-center;
     position: relative;
     left: -$marker-radius;
   }
 
   &__step-marker {
     flex: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
     @include mixins.circle($marker-radius * 2);
     color: white;
     background: colors.$primary;

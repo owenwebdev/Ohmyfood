@@ -17,7 +17,18 @@ h3 {
   font-weight: 300;
 }
 
+h4 {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+
+h5 {
+  font-size: 1.07rem;
+  font-weight: 300;
+}
+
 a {
+  color: unset;
   text-decoration: none; /* Remove underline */
 }
 
@@ -26,6 +37,7 @@ ol {
   list-style-type: none; /* Remove markers */
 }
 
+// <i class="fas fa-heart"></i>
 @mixin heart-unfilled {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
@@ -33,12 +45,14 @@ ol {
   font-weight: 400;
 }
 
+// <i class="far fa-heart"></i>
 @mixin heart-filled {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
   font-style: normal;
   font-weight: 900;
 }
+
 
 // @mixin utensils {
 //   content: "\f2e7";

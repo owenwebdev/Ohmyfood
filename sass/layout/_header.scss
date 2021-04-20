@@ -3,16 +3,23 @@
 @use "../abstracts/mixins";
 
 .header {
-    position: fixed;
-    top: 0;
-    z-index: 1;
+    // position: fixed;
+    @include mixins.flex-center;
+    position: sticky;
+    top: 0rem;
+    z-index: 1000;
     height: variables.$header-height;
-    width: 100%;
-    padding-top: 1.4rem;
+    // padding-top: 1.4rem;
     text-align: center;
     background: colors.$background1;
-    @include mixins.shadow;
-    &__logo {
-        height: 1.75rem;
-    }
+    @include mixins.shadow-hard;
+
+    font-family: "Shrikhand", cursive;
+    font-size: 1.8rem;
+    color: colors.$logo;
+
+    // &__logo {
+    //     height: 1.75rem;
+    //     opacity: 85%;
+    // }
 }

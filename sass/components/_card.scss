@@ -1,82 +1,71 @@
-// @use "sass:list";
-@use "sass:map";
-
-@use "../abstracts/variables";
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
-@use "../base/typography";
 
-@function restaurant-photo-url($filename) {
-  @return variables.$restaurant-photos-directory + "/" + $filename;
-}
+.card {
+  display: grid;
+  height: 15.5rem;
+  margin: 1.25rem 0;
+  grid-template-areas:
+    "photo photo"
+    "title fav"
+    "info fav";
+  grid-template-columns: 1fr 4rem;
+  grid-template-rows: minmax(0, 1fr) 2.4rem 2.35rem;
+  overflow: hidden;
+  position: relative;
+  background: colors.$background1;
+  @include mixins.rounded-corners;
+  @include mixins.shadow-soft-light;
+  transition: all 350ms;
 
-@mixin generate-card($index, $restaurant) {
-//   $restaurant: list.nth(variables.$restaurants, $index);
+  &:hover {
+    @include mixins.shadow-soft-dark;
+  }
 
-  .card#{$index} {
-    display: grid;
-    height: 14rem;
-    margin: 1.25rem 0;
-    grid-template-areas:
-      "photo photo"
-      "title fav"
-      "info fav";
-    grid-template-columns: 1fr 3rem;
-    grid-template-rows: minmax(0, 1fr) 2rem 2.5rem;
-    overflow: hidden;
-    position: relative;
-    background: colors.$background1;
-    @include mixins.rounded-corners;
-    @include mixins.shadow;
+  &__photo {
+    grid-area: photo;
+    @include mixins.cover;
+    background-color: colors.$background3;
+  }
 
-    &__photo {
-      grid-area: photo;
-      $photo-filename: map.get($restaurant, "photo");
-      $photo-url: restaurant-photo-url($photo-filename);
-      background-image: url($photo-url);
-      background-color: colors.$background3;
-      background-size: cover;
-    }
+  &__title {
+    grid-area: title;
+    padding: 0 0 0 1rem;
+    align-self: end;
+  }
 
-    &__title {
-      grid-area: title;
-      padding: 0rem 0.5rem 0rem 0.5rem;
-      align-self: end;
-      &::before {
-        content: map.get($restaurant, "title");
+  &__info {
+    grid-area: info;
+    padding: 0.2rem 0 0 1rem;
+  }
+
+  &__favourite {
+    grid-area: fav;
+    align-self: center;
+    justify-self: center;
+    font-size: 1.5rem;
+    color: colors.$logo;
+
+    & > .overlay {
+      position: relative;
+      left: -50%;
+      @include mixins.text-overlay(colors.$gradient-secondary-primary);
+      opacity: 0%;
+      transition: all 0.375s;
+      &:hover {
+        opacity: 100%;
       }
     }
+  }
 
-    &__info {
-      grid-area: info;
-      padding: 0.3rem 0.5rem 0 0.5rem;
-      &::before {
-        content: map.get($restaurant, "info");
-      }
-    }
-
-    &__favourite {
-      grid-area: fav;
-      align-self: center;
-      justify-self: center;
-      &::before {
-        @include typography.heart-unfilled
-      }
-    }
-
-    &__label {
-      $label: map.get($restaurant, "label");
-      @if $label {
-        display: inline-block;
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        padding: 0.5rem 1.5rem;
-        background: colors.$tertiary;
-        &::before {
-          content: $label;
-        }
-      }
-    }
+  &__label {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    color: colors.$tertiary-shade;
+    background: colors.$tertiary;
+    @include mixins.rounded-corners(0.2rem);
   }
 }

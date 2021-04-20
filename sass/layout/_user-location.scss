@@ -1,12 +1,12 @@
 @use "../abstracts/variables";
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 
 .user-location {
-    display: flex;
-    height: variables.$header-height + 3rem;
-    padding-top: variables.$header-height;
-    justify-content: center;
-    align-items: center;
+    @include mixins.flex-center;
+    // height: variables.$header-height + 3rem;
+    // padding-top: variables.$header-height;
+    height: 3rem;
     color: colors.$logo;
     background: colors.$background3;
 }
