@@ -1,3 +1,5 @@
+// _mixins.scss
+
 @use "../abstracts/colors";
 
 @mixin shadow-soft-light {
@@ -38,19 +40,38 @@
   object-fit: cover;
 }
 
-@mixin capsule($width: 14rem, $height: 3rem) {
+@mixin capsule($width, $height, $background) {
     @include flex-center;
     width: $width;
     height: $height;
-    margin: auto;
+    // margin: auto;
     border-radius: $height / 2;
     color: #fff;
-    background: colors.$gradient-secondary-primary;
+    background: $background;
+    @include shadow-soft-medium;
+    transition: all 350ms;
+    
+    &:hover {
+        @include shadow-soft-dark;
+    }
 }
 
-@mixin text-overlay($overlay) {
-  background: $overlay;
+@mixin text-overlay($background) {
+  position: relative;
+  left: -50%;
+  background: $background;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  opacity: 0%;
+  transition: opacity 0.375s;
+  &:hover {
+    opacity: 100%;
+  }
+}
+
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

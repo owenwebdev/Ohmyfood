@@ -15,9 +15,8 @@
 
   <body>
     <header class="header">
-      <!-- <img class="header__logo" src="images/logo/ohmyfood.png" alt="logo" /> -->
       <!-- <img class="header__logo" src="images/logo/ohmyfood@2x.svg" alt="logo" /> -->
-        <a href="#">ohmyfood</a>
+      <a href="#">ohmyfood</a>
     </header>
 
     <main>
@@ -25,40 +24,40 @@
         <span class="fas fa-map-marker-alt"></span>&emsp;Paris, Belleville
       </section>
 
-      <section class="intro wrapper">
-        <h2 class="intro__heading">Book the menu you like</h2>
-        <h3 class="intro__subheading">
-          Discover top-of-the-art restaurants we picked for you
-        </h3>
-        <a class="intro__explore-link" href="#restaurants-target"
-          >Explore our restaurants</a
-        >
+      <section class="intro">
+        <div class="wrapper">
+          <h2 class="intro__heading">Book the menu you like</h2>
+          <h3 class="intro__subheading">
+            Discover top-of-the-art restaurants we picked for you
+          </h3>
+          <a class="intro__explore" href="#restaurants-target"
+            >Explore our restaurants</a
+          >
+        </div>
       </section>
 
       <section class="instructions">
         <div class="wrapper">
           <h2 class="instructions__heading">How it works</h2>
           <ol class="instructions__list">
-            <li class="instructions__step">
-              <div class="instructions__step-content">
-                <div class="instructions__step-marker">1</div>
-                <div class="instructions__step-icon fas fa-mobile-alt"></div>
+            <li class="step">
+              <div class="step__content">
+                <div class="step__marker">1</div>
+                <div class="step__icon fas fa-mobile-alt"></div>
                 Choose a restaurant
               </div>
             </li>
-            <li class="instructions__step">
-              <div class="instructions__step-content">
-                <div class="instructions__step-marker">2</div>
-                <div class="instructions__step-icon fas fa-list"></div>
+            <li class="step">
+              <div class="step__content">
+                <div class="step__marker">2</div>
+                <div class="step__icon fas fa-list"></div>
                 Create your menu
               </div>
             </li>
-            <li class="instructions__step instructions__step--highlighted">
-              <div class="instructions__step-content">
-                <div class="instructions__step-marker">3</div>
-                <div
-                  class="instructions__step-icon instructions__step-icon--highlighted fas fa-store"
-                ></div>
+            <li class="step step--highlighted">
+              <div class="step__content">
+                <div class="step__marker">3</div>
+                <div class="step__icon fas fa-store"></div>
                 Go enjoy it at the restaurant
               </div>
             </li>
@@ -66,77 +65,99 @@
         </div>
       </section>
 
-      <section class="restaurants wrapper">
-        <div id="restaurants-target"></div>
-        <h2 class="restaurants__heading">Restaurants</h2>
-        <ul class="restaurants__list">
-          <li>
-            <a class="restaurants__link" href="card1.html">
-              <div class="card">
-                <img
-                  class="card__photo"
-                  src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
-                  alt=""
-                />
-                <h4 class="card__title">The Full Palette</h4>
-                <h5 class="card__info">New York</h5>
-                <div class="card__favourite">
-                    <span class="far fa-heart"></span><span class="fas fa-heart overlay"></span>
+      <section class="restaurants">
+        <div class="wrapper">
+          <div id="restaurants-target"></div>
+          <h2>Restaurants</h2>
+          <ul>
+            <li>
+              <a class="restaurants__link" href="full-palette.html">
+                <div class="restaurant">
+                  <div class="restaurant__photo">
+                    <img
+                      class="covering-photo object-bottom"
+                      src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <h4 class="restaurant__title">The Full Palette</h4>
+                  <h5 class="restaurant__info">New York</h5>
+                  <div class="restaurant__favourite">
+                    <div class="favourite">
+                      <span class="far fa-heart"></span
+                      ><span class="fas fa-heart overlay"></span>
+                    </div>
+                  </div>
+                  <div class="restaurant__label">New</div>
                 </div>
-                <div class="card__label">New</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="restaurants__link" href="card2.html">
-              <div class="card">
-                <img
-                  class="card__photo"
-                  src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-                  alt=""
-                />
-                <h4 class="card__title">The Enchanted Plate</h4>
-                <h5 class="card__info">New York</h5>
-                <div class="card__favourite">
-                    <span class="far fa-heart"></span><span class="fas fa-heart overlay"></span>
+              </a>
+            </li>
+            <li>
+              <a class="restaurants__link" href="restaurant2.html">
+                <div class="restaurant">
+                  <div class="restaurant__photo">
+                    <img
+                      class="covering-photo object-center-61pc"
+                      src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <h4 class="restaurant__title">The Enchanted Plate</h4>
+                  <h5 class="restaurant__info">New York</h5>
+                  <div class="restaurant__favourite">
+                    <div class="favourite">
+                      <span class="far fa-heart"></span
+                      ><span class="fas fa-heart overlay"></span>
+                    </div>
+                  </div>
+                  <div class="restaurant__label">New</div>
                 </div>
-                <div class="card__label">New</div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="restaurants__link" href="card3.html">
-              <div class="card">
-                <img
-                  class="card__photo"
-                  src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
-                  alt=""
-                />
-                <h4 class="card__title">Bastille</h4>
-                <h5 class="card__info">New York</h5>
-                <div class="card__favourite">
-                    <span class="far fa-heart"></span><span class="fas fa-heart overlay"></span>
+              </a>
+            </li>
+            <li>
+              <a class="restaurants__link" href="restaurant3.html">
+                <div class="restaurant">
+                  <div class="restaurant__photo">
+                    <img
+                      class="covering-photo object-bottom"
+                      src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <h4 class="restaurant__title">Bastille</h4>
+                  <h5 class="restaurant__info">New York</h5>
+                  <div class="restaurant__favourite">
+                    <div class="favourite">
+                      <span class="far fa-heart"></span
+                      ><span class="fas fa-heart overlay"></span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a class="restaurants__link" href="card4.html">
-              <div class="card">
-                <img
-                  class="card__photo"
-                  src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
-                  alt=""
-                />
-                <h4 class="card__title">Le Gourmand</h4>
-                <h5 class="card__info">New York</h5>
-                <div class="card__favourite">
-                    <span class="far fa-heart"></span><span class="fas fa-heart overlay"></span>
+              </a>
+            </li>
+            <li>
+              <a class="restaurants__link" href="restaurant4.html">
+                <div class="restaurant">
+                  <div class="restaurant__photo">
+                    <img
+                      class="covering-photo object-bottom"
+                      src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <h4 class="restaurant__title">Le Gourmand</h4>
+                  <h5 class="restaurant__info">New York</h5>
+                  <div class="restaurant__favourite">
+                    <div class="favourite">
+                      <span class="far fa-heart"></span
+                      ><span class="fas fa-heart overlay"></span>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </a>
-          </li>
-        </ul>
+              </a>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 

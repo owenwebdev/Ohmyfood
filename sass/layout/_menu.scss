@@ -1,0 +1,34 @@
+// _menu.scss
+
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+@use "../components/favourite";
+@use "../components/dish";
+
+.menu {
+  border-radius: 2.5rem 2.5rem 0 0;
+  position: relative;
+  margin-top: -2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;;
+  background: colors.$background2;
+
+  &__heading {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2.25rem;
+    font-family: "Shrikhand", cursive;
+    font-size: 1.62rem;
+    color: colors.$logo;
+  }
+
+  &__courses {
+    margin-bottom: 3rem;
+  }
+
+  &__order {
+    margin: 0 auto;
+    @include mixins.capsule(11.5rem, 3rem, colors.$gradient-secondary-primary);
+  }
+}

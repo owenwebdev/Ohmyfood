@@ -1,0 +1,14 @@
+// _favourite.scss
+
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.favourite {
+  width: fit-content;
+  font-size: 1.5rem;
+  color: colors.$logo;
+
+  & > .overlay {
+    @include mixins.text-overlay(colors.$gradient-secondary-primary);
+  }
+}

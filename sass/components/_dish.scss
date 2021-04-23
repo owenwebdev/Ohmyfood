@@ -1,0 +1,77 @@
+/**
+*   _dish.scss
+*/
+
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+
+.dish {
+  height: 4.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  background: colors.$background1;
+  @include mixins.rounded-corners;
+  @include mixins.shadow-soft-light;
+
+  &__content {
+    $checkbox-width: 3.5rem;
+    height: 100%;
+    width: calc(100% + #{$checkbox-width});
+    display: grid;
+    align-items: end;
+    grid-template-areas:
+      "title price checkbox"
+      "info price checkbox";
+    grid-template-columns: 1fr 4.5rem $checkbox-width;
+    grid-template-rows: 2rem 1fr;
+    transition: width 0.5s;
+  }
+
+  &__title {
+    grid-area: title;
+    padding: 0 0 0 1rem;
+    @include mixins.overflow-ellipsis;
+  }
+
+  &__info {
+    grid-area: info;
+    // min-width: 0;
+    padding: 0 0 0.7rem 1rem;
+
+    @include mixins.overflow-ellipsis;
+    vertical-align: baseline;
+  }
+
+  &__price {
+    grid-area: price;
+    text-align: center;
+    font-weight: 500;
+    padding-bottom: 0.7rem;
+  }
+
+  &__checkbox {
+    grid-area: checkbox;
+    height: 100%;
+    @include mixins.flex-center;
+    background: colors.$tertiary;
+  }
+
+  &__checkmark {
+    font-size: 1.25rem;
+    color: #fff;
+    opacity: 0%;
+    transform: rotate(-180deg);
+    transition: transform 0.4s 0.1s;
+  }
+
+  &:hover {
+    .dish__content {
+      width: 100%;
+    }
+    .dish__checkmark {
+      opacity: 100%;
+      transform: rotate(0);
+    }
+  }
+}

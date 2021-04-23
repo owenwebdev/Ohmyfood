@@ -1,7 +1,12 @@
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
+@use "../abstracts/utilities";
 
-.card {
+@use "../components/covering-photo";
+@use "../components/favourite";
+
+
+.restaurant {
   display: grid;
   height: 15.5rem;
   margin: 1.25rem 0;
@@ -9,7 +14,7 @@
     "photo photo"
     "title fav"
     "info fav";
-  grid-template-columns: 1fr 4rem;
+  grid-template-columns: 1fr 3.5rem;
   grid-template-rows: minmax(0, 1fr) 2.4rem 2.35rem;
   overflow: hidden;
   position: relative;
@@ -24,8 +29,6 @@
 
   &__photo {
     grid-area: photo;
-    @include mixins.cover;
-    background-color: colors.$background3;
   }
 
   &__title {
@@ -43,19 +46,12 @@
     grid-area: fav;
     align-self: center;
     justify-self: center;
-    font-size: 1.5rem;
-    color: colors.$logo;
+    // font-size: 1.5rem;
+    // color: colors.$logo;
 
-    & > .overlay {
-      position: relative;
-      left: -50%;
-      @include mixins.text-overlay(colors.$gradient-secondary-primary);
-      opacity: 0%;
-      transition: all 0.375s;
-      &:hover {
-        opacity: 100%;
-      }
-    }
+  //   & > .overlay {
+  //     @include mixins.overlay(colors.$gradient-secondary-primary);
+  //   }
   }
 
   &__label {

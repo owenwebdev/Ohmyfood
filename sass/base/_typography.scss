@@ -37,7 +37,7 @@ ol {
   list-style-type: none; /* Remove markers */
 }
 
-// <i class="fas fa-heart"></i>
+// <i class="far fa-heart"></i>
 @mixin heart-unfilled {
   content: "\f004";
   font-family: "Font Awesome 5 Free";
@@ -45,7 +45,7 @@ ol {
   font-weight: 400;
 }
 
-// <i class="far fa-heart"></i>
+// <i class="fas fa-heart"></i>
 @mixin heart-filled {
   content: "\f004";
   font-family: "Font Awesome 5 Free";

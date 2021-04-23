@@ -1,6 +1,9 @@
-@use "sass:list";
+// _restaurant.scss
+
+@use "../abstracts/colors";
 @use "../abstracts/variables";
-@use "../components/card";
+
+@use "../components/restaurant";
 
 $padding-top: 3rem;
 
@@ -10,10 +13,7 @@ $padding-top: 3rem;
 }
 
 .restaurants {
-  padding-top: 3rem;
+  padding-top: $padding-top;
   padding-bottom: 2.75rem;
-
-  &__link {
-    color: #000;
-  }
+  background-color: colors.$background2;
 }

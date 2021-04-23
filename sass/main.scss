@@ -1,9 +1,5 @@
 @use "base/reset";
 @use "base/typography";
 
-// @use "abstracts/colors";
-
-@use "layout/body";
-@use "layout/wrapper";
-
-@use "pages/home.scss";
+@use "pages/index.scss";
+@use "pages/restaurant-page.scss";

@@ -1,25 +1,21 @@
+/**
+*   _header.scss
+*/
+
 @use "../abstracts/variables";
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
 .header {
-    // position: fixed;
     @include mixins.flex-center;
     position: sticky;
     top: 0rem;
     z-index: 1000;
     height: variables.$header-height;
-    // padding-top: 1.4rem;
     text-align: center;
     background: colors.$background1;
     @include mixins.shadow-hard;
-
     font-family: "Shrikhand", cursive;
     font-size: 1.8rem;
     color: colors.$logo;
-
-    // &__logo {
-    //     height: 1.75rem;
-    //     opacity: 85%;
-    // }
 }

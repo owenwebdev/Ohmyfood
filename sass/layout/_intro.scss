@@ -1,3 +1,5 @@
+// _intro
+
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
@@ -6,6 +8,7 @@
     padding-top: 2.5rem;
     padding-bottom: 3.5rem;
     text-align: center;
+    background-color: colors.$background2;
 
     &__heading {
         margin-bottom: 2.5rem;
@@ -15,13 +18,8 @@
         margin-bottom: 2.5rem;
     }
 
-    &__explore-link {
-        @include mixins.capsule;
-        @include mixins.shadow-soft-medium;
-        transition: all 350ms;
-        
-        &:hover {
-            @include mixins.shadow-soft-dark;
-        }
+    &__explore {
+        margin: 0 auto;
+        @include mixins.capsule(13.5rem, 3rem, colors.$gradient-secondary-primary);
     }
 }
