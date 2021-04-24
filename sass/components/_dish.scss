@@ -2,6 +2,8 @@
 *   _dish.scss
 */
 
+@use "../base/typography";
+
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
@@ -30,23 +32,23 @@
 
   &__title {
     grid-area: title;
-    padding: 0 0 0 1rem;
-    @include mixins.overflow-ellipsis;
+    padding: 0 0 0 0.7rem;
+    // @include typography.dish-title;
+    @include typography.overflow-ellipsis;
   }
 
   &__info {
     grid-area: info;
-    // min-width: 0;
-    padding: 0 0 0.7rem 1rem;
-
-    @include mixins.overflow-ellipsis;
-    vertical-align: baseline;
+    padding: 0 0 0.7rem 0.7rem;
+    // @include typography.dish-info;
+    @include typography.overflow-ellipsis;
+    // vertical-align: baseline;
   }
 
   &__price {
     grid-area: price;
     text-align: center;
-    font-weight: 500;
+    // @include typography.dish-price;
     padding-bottom: 0.7rem;
   }
 

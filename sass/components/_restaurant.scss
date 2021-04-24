@@ -2,9 +2,7 @@
 @use "../abstracts/mixins";
 @use "../abstracts/utilities";
 
-@use "../components/covering-photo";
 @use "../components/favourite";
-
 
 .restaurant {
   display: grid;
@@ -59,7 +57,7 @@
     right: 1rem;
     top: 1rem;
     padding: 0.5rem 1.5rem;
-    font-weight: 500;
+    // font-weight: 500;
     color: colors.$tertiary-shade;
     background: colors.$tertiary;
     @include mixins.rounded-corners(0.2rem);

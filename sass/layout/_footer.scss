@@ -1,21 +1,9 @@
 @use "../abstracts/colors";
 
-$background-color: colors.$background4;
-
 .footer {
   padding: 1rem 0 1.75rem 0;
   background: colors.$background4;
   color: #fff;
-
-  &__heading {
-    font-family: "Shrikhand", cursive;
-    font-size: 1.25rem;
-    line-height: 2.75rem;
-  }
-
-  &__link {
-    line-height: 1.75rem;
-  }
 
   &__link-icon {
     width: 1.75rem;

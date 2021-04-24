@@ -6,16 +6,19 @@
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
+// @use "../base/typography";
+
 .header {
-    @include mixins.flex-center;
-    position: sticky;
-    top: 0rem;
-    z-index: 1000;
-    height: variables.$header-height;
-    text-align: center;
-    background: colors.$background1;
-    @include mixins.shadow-hard;
-    font-family: "Shrikhand", cursive;
-    font-size: 1.8rem;
+  @include mixins.flex-center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: variables.$header-height;
+  text-align: center;
+  background: colors.$background1;
+  @include mixins.shadow-hard;
+
+  &__heading {
     color: colors.$logo;
+  }
 }

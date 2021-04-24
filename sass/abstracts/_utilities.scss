@@ -1,9 +1,20 @@
-// _utilities.scss
+/**
+* _cover.scss
+*/
 
-.object-bottom {
-  object-position: bottom;
-}
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
 
-.object-center-61pc {
-  object-position: center 61%;
+.cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  &--at-bottom {
+    object-position: bottom;
+  }
+
+  &--at-center-61pc {
+    object-position: center 61%;
+  }
 }

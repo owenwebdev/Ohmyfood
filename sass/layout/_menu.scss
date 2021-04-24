@@ -3,6 +3,8 @@
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
+// @use "../base/typography";
+
 @use "../components/favourite";
 @use "../components/dish";
 
@@ -11,20 +13,40 @@
   position: relative;
   margin-top: -2.5rem;
   padding-top: 2rem;
-  padding-bottom: 4rem;;
+  padding-bottom: 4rem;
   background: colors.$background2;
 
+  &__intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.25rem;
+  }
+
   &__heading {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 2.25rem;
-    font-family: "Shrikhand", cursive;
-    font-size: 1.62rem;
+    // @include typography.menu-title;
     color: colors.$logo;
   }
 
   &__courses {
     margin-bottom: 3rem;
+  }
+
+  &__course {
+    margin-bottom: 2rem;
+  }
+
+  &__course-heading {
+    // @include typography.course-title;
+
+    &::after {
+      display: block;
+      height: 0.1875rem;
+      width: 2.8rem;
+      margin-top: 0.5rem;
+      background-color: colors.$tertiary;
+      content: "";
+    }
   }
 
   &__order {

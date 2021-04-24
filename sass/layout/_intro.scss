@@ -1,5 +1,7 @@
 // _intro
 
+// @use "../base/typography";
+
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
@@ -11,6 +13,7 @@
     background-color: colors.$background2;
 
     &__heading {
+        // @include typography.intro-heading;
         margin-bottom: 2.5rem;
     }
     

@@ -16,35 +16,35 @@
   <body>
     <header class="header">
       <!-- <img class="header__logo" src="images/logo/ohmyfood@2x.svg" alt="logo" /> -->
-      <a href="index.html">ohmyfood</a>
+      <a href="index.html"><h1 class="header__heading">ohmyfood</h1></a>
     </header>
 
     <main>
       <section class="restaurant-photo">
         <img
-          class="covering-photo object-bottom"
-          src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+        class="cover cover--at-bottom"
+        src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
           alt=""
         />
       </section>
 
       <section class="menu">
         <div class="wrapper">
-          <div class="menu__heading">
-            The Full Palette
+          <div class="menu__intro">
+            <h2 class="menu__heading">The Full Palette</h2>
             <div class="favourite">
-              <span class="far fa-heart"></span
-              ><span class="fas fa-heart overlay"></span>
+              <span class="far fa-heart favourite__unchecked"></span
+              ><span class="fas fa-heart favourite__checked"></span>
             </div>
           </div>
           <ul class="menu__courses">
-            <li>
-              <h3>Entrees</h3>
+            <li class="menu__course">
+              <h3 class="menu__course-heading">Entrees</h3>
               <ul class="dishes">
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Escargot</h4>
-                    <h5 class="dish__info">With southern French spices</h5>
+                    <p class="dish__info">With southern French spices</p>
                     <h5 class="dish__price">25€</h5>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -56,7 +56,7 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Duck Foie Gras</h4>
-                    <h5 class="dish__info">With black truffle shavings</h5>
+                    <p class="dish__info">With black truffle shavings</p>
                     <div class="dish__price">35€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -68,7 +68,7 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Fried Egg</h4>
-                    <h5 class="dish__info">With cheesy peas</h5>
+                    <p class="dish__info">With cheesy peas</p>
                     <div class="dish__price">20€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -79,15 +79,15 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <h3>Main Dishes</h3>
+            <li class="menu__course">
+              <h3 class="menu__course-heading">Main Dishes</h3>
               <ul class="dishes">
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Herb-Encrusted Steak</h4>
-                    <h5 class="dish__info">
+                    <p class="dish__info">
                       With delicately sliced and seasoned vegetables
-                    </h5>
+                    </p>
                     <div class="dish__price">40€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -99,9 +99,9 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Oxtail Shepherd's Pie</h4>
-                    <h5 class="dish__info">
+                    <p class="dish__info">
                       With black truffle and pureed parsnips
-                    </h5>
+                    </p>
                     <div class="dish__price">35€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -113,7 +113,7 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Fillet of Sole</h4>
-                    <h5 class="dish__info">With citrus dressing</h5>
+                    <p class="dish__info">With citrus dressing</p>
                     <div class="dish__price">44€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -124,13 +124,13 @@
                 </li>
               </ul>
             </li>
-            <li>
-              <h3>Desserts</h3>
+            <li class="menu__course">
+              <h3 class="menu__course-heading">Desserts</h3>
               <ul class="dishes">
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Paris-Brest</h4>
-                    <h5 class="dish__info">Revisited</h5>
+                    <p class="dish__info">Revisited</p>
                     <div class="dish__price">18€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -142,7 +142,7 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Chocolate Macaroons</h4>
-                    <h5 class="dish__info">With vanilla ice cream</h5>
+                    <p class="dish__info">With vanilla ice cream</p>
                     <div class="dish__price">22€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">
@@ -154,7 +154,7 @@
                 <li class="dish">
                   <div class="dish__content">
                     <h4 class="dish__title">Chocolate Mousse</h4>
-                    <h5 class="dish__info">With spices and black truffle</h5>
+                    <p class="dish__info">With spices and black truffle</p>
                     <div class="dish__price">23€</div>
                     <div class="dish__checkbox">
                       <div class="dish__checkmark">

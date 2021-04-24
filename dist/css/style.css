@@ -12,28 +12,6 @@
 
 html {
   font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: 1rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-h3 {
-  font-size: 1.17rem;
-  font-weight: 300;
-}
-
-h4 {
-  font-size: 1.17rem;
-  font-weight: 700;
-}
-
-h5 {
-  font-size: 1.07rem;
-  font-weight: 300;
 }
 
 a {
@@ -46,6 +24,95 @@ ul,
 ol {
   list-style-type: none;
   /* Remove markers */
+}
+
+.header__heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.8rem;
+}
+
+.user-location {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.intro__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.intro__subheading {
+  font-size: 1.17rem;
+  font-weight: 300;
+}
+.intro__explore {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.instructions__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.restaurants__heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.restaurant__title {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+.restaurant__info {
+  font-size: 1.07rem;
+  font-weight: 300;
+}
+.restaurant__label {
+  font-size: 1.07rem;
+  font-weight: 500;
+}
+
+.menu__heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.62rem;
+}
+.menu__course-heading {
+  font-size: 1.07rem;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.menu__order {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.dish__title {
+  font-size: 1.17rem;
+  font-weight: 700;
+}
+.dish__info {
+  font-size: 1rem;
+  font-weight: 300;
+}
+.dish__price {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.footer__heading {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.25rem;
+  line-height: 2.75rem;
+}
+.footer__link {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.75rem;
 }
 
 /**
@@ -67,14 +134,14 @@ ol {
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 0rem;
+  top: 0;
   z-index: 1000;
   height: 4rem;
   text-align: center;
   background: #fff;
   box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.2);
-  font-family: "Shrikhand", cursive;
-  font-size: 1.8rem;
+}
+.header__heading {
   color: #353535;
 }
 
@@ -139,8 +206,7 @@ ol {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  left: -0.75rem;
+  margin-left: -0.75rem;
 }
 .step__marker {
   flex: none;
@@ -166,30 +232,29 @@ ol {
   background: #fff;
 }
 
-.object-bottom {
-  object-position: bottom;
-}
-
-.object-center-61pc {
-  object-position: center 61%;
-}
-
 /**
-* _covering-photo.scss
+* _cover.scss
 */
-.covering-photo {
+.cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  background-color: #eaeaea;
+}
+.cover--at-bottom {
+  object-position: bottom;
+}
+.cover--at-center-61pc {
+  object-position: center 61%;
 }
 
 .favourite {
   width: fit-content;
   font-size: 1.5rem;
+}
+.favourite__unchecked {
   color: #353535;
 }
-.favourite > .overlay {
+.favourite__checked {
   position: relative;
   left: -50%;
   background: linear-gradient(#ff79da, #9356dc);
@@ -199,7 +264,7 @@ ol {
   opacity: 0%;
   transition: opacity 0.375s;
 }
-.favourite > .overlay:hover {
+.favourite__checked:hover {
   opacity: 100%;
 }
 
@@ -242,7 +307,6 @@ ol {
   right: 1rem;
   top: 1rem;
   padding: 0.5rem 1.5rem;
-  font-weight: 500;
   color: #008766;
   background: #99e2d0;
   border-radius: 0.2rem;
@@ -263,14 +327,6 @@ ol {
   padding: 1rem 0 1.75rem 0;
   background: #353535;
   color: #fff;
-}
-.footer__heading {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.25rem;
-  line-height: 2.75rem;
-}
-.footer__link {
-  line-height: 1.75rem;
 }
 .footer__link-icon {
   width: 1.75rem;
@@ -306,23 +362,21 @@ ol {
 }
 .dish__title {
   grid-area: title;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 0.7rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 .dish__info {
   grid-area: info;
-  padding: 0 0 0.7rem 1rem;
+  padding: 0 0 0.7rem 0.7rem;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  vertical-align: baseline;
 }
 .dish__price {
   grid-area: price;
   text-align: center;
-  font-weight: 500;
   padding-bottom: 0.7rem;
 }
 .dish__checkbox {
@@ -356,16 +410,28 @@ ol {
   padding-bottom: 4rem;
   background: #f6f6f6;
 }
-.menu__heading {
+.menu__intro {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-bottom: 2.25rem;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.62rem;
+}
+.menu__heading {
   color: #353535;
 }
 .menu__courses {
   margin-bottom: 3rem;
+}
+.menu__course {
+  margin-bottom: 2rem;
+}
+.menu__course-heading::after {
+  display: block;
+  height: 0.1875rem;
+  width: 2.8rem;
+  margin-top: 0.5rem;
+  background-color: #99e2d0;
+  content: "";
 }
 .menu__order {
   margin: 0 auto;
