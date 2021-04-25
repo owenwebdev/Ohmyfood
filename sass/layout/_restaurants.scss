@@ -3,11 +3,9 @@
 @use "../abstracts/colors";
 @use "../abstracts/variables";
 
-@use "../components/restaurant";
-
 $padding-top: 3rem;
 
-#restaurants-target {
+#restaurants-href {
   position: relative;
   top: -($padding-top + variables.$header-height - 1);
 }

@@ -7,11 +7,11 @@
 }
 
 @mixin shadow-soft-medium {
-    box-shadow: 0 0.375rem 0.5rem 0 rgba(0 0 0 / 20%);
+    box-shadow: 0 0.375rem 0.5rem 0.1rem rgba(0 0 0 / 20%);
 }
 
 @mixin shadow-soft-dark {
-    box-shadow: 0 0.375rem 1rem 0.125rem rgba(0 0 0 / 30%);
+    box-shadow: 0 0.375rem 0.5rem 0.2rem rgba(0 0 0 / 30%);
 }
   
 @mixin shadow-hard {
@@ -34,25 +34,30 @@
   align-items: center;
 }
 
-@mixin capsule($width, $height, $background) {
+@mixin capsule($width, $height, $background-image) {
     @include flex-center;
     width: $width;
     height: $height;
-    // margin: auto;
     border-radius: $height / 2;
     color: #fff;
-    background: $background;
-    @include shadow-soft-medium;
+    background-image: $background-image;
+    @include shadow-soft-light;
     transition: all 350ms;
     
     &:hover {
-        @include shadow-soft-dark;
+        @include shadow-soft-medium;
     }
 }
 
-@mixin text-overlay($background) {
-  background: $background;
+@mixin text-overlay($background-image) {
+  background-image: $background-image;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+
+@mixin overflow-ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

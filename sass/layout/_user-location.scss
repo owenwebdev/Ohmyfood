@@ -1,13 +1,17 @@
-// @use "../base/typography";
-
-// @use "../abstracts/variables";
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
 .user-location {
+  height: 3rem;
+  background-color: colors.$background3;
+
+  &__content {
+    height: 100%;
     @include mixins.flex-center;
-    height: 3rem;
-    // @include typography.location;
+  }
+
+  &__info {
     color: colors.$logo;
-    background: colors.$background3;
+    @include mixins.overflow-ellipsis;
+  }
 }

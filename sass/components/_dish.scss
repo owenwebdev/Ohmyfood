@@ -2,8 +2,6 @@
 *   _dish.scss
 */
 
-@use "../base/typography";
-
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
@@ -12,7 +10,7 @@
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
   overflow: hidden;
-  background: colors.$background1;
+  background-color: colors.$background1;
   @include mixins.rounded-corners;
   @include mixins.shadow-soft-light;
 
@@ -33,22 +31,18 @@
   &__title {
     grid-area: title;
     padding: 0 0 0 0.7rem;
-    // @include typography.dish-title;
-    @include typography.overflow-ellipsis;
+    @include mixins.overflow-ellipsis;
   }
 
   &__info {
     grid-area: info;
     padding: 0 0 0.7rem 0.7rem;
-    // @include typography.dish-info;
-    @include typography.overflow-ellipsis;
-    // vertical-align: baseline;
+    @include mixins.overflow-ellipsis;
   }
 
   &__price {
     grid-area: price;
     text-align: center;
-    // @include typography.dish-price;
     padding-bottom: 0.7rem;
   }
 
@@ -56,14 +50,14 @@
     grid-area: checkbox;
     height: 100%;
     @include mixins.flex-center;
-    background: colors.$tertiary;
+    background-color: colors.$tertiary;
   }
 
   &__checkmark {
     font-size: 1.25rem;
     color: #fff;
     opacity: 0%;
-    transform: rotate(-180deg);
+    transform: translateX(-0.5rem) rotate(-180deg);
     transition: transform 0.4s 0.1s;
   }
 
@@ -73,7 +67,7 @@
     }
     .dish__checkmark {
       opacity: 100%;
-      transform: rotate(0);
+      transform: translateX(0) rotate(0);
     }
   }
 }

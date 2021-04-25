@@ -1,5 +1,9 @@
 // _index.scss
 
+@use "../components/favourite";
+@use "../components/step";
+@use "../components/restaurant";
+
 @use "../layout/wrapper";
 @use "../layout/header";
 @use "../layout/user-location";

@@ -13,13 +13,12 @@ $marker-radius: 0.75rem;
   align-items: center;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  background: colors.$background2;
+  background-color: colors.$background2;
   @include mixins.rounded-corners;
   @include mixins.shadow-soft-light;
-  font-weight: 500;
 
   &--highlighted {
-    background: colors.$primary-tint;
+    background-color: colors.$primary-tint;
     --icon-color: #{colors.$primary};
   }
 
@@ -33,7 +32,7 @@ $marker-radius: 0.75rem;
     @include mixins.flex-center;
     @include mixins.circle($marker-radius * 2);
     color: white;
-    background: colors.$primary;
+    background-color: colors.$primary;
   }
 
   &__icon {

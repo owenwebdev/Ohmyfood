@@ -6,8 +6,6 @@
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
-// @use "../base/typography";
-
 .header {
   @include mixins.flex-center;
   position: sticky;
@@ -15,10 +13,17 @@
   z-index: 1000;
   height: variables.$header-height;
   text-align: center;
-  background: colors.$background1;
+  background-color: colors.$background1;
   @include mixins.shadow-hard;
 
   &__heading {
     color: colors.$logo;
+  }
+
+  &__return {
+    margin-left: 1.5rem;
+    position: absolute;
+    left: 0;
+    font-size: 1.25rem;
   }
 }

@@ -1,5 +1,8 @@
 // _restaurant-page.scss
 
+@use "../components/favourite";
+@use "../components/dish";
+
 @use "../layout/wrapper";
 @use "../layout/header";
 @use "../layout/restaurant-photo";

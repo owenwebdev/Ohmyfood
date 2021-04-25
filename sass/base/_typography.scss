@@ -10,28 +10,25 @@ html {
 
 a {
   color: unset;
-  text-decoration: none; /* Remove underline */
+  text-decoration: none; // Remove underline
 }
 
 ul,
 ol {
-  list-style-type: none; /* Remove markers */
-}
-
-@mixin overflow-ellipsis {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  list-style-type: none; // Remove markers
 }
 
 .header__heading {
   font-family: $display-font-family;
+  font-weight: normal;
   font-size: 1.8rem;
 }
 
 .user-location {
-  font-size: 1rem;
-  font-weight: 400;
+  &__content {
+    font-size: 1rem;
+    font-weight: 400;
+  }
 }
 
 .intro {
@@ -40,7 +37,7 @@ ol {
     font-weight: 700;
   }
 
-  &__subheading {
+  &__info {
     font-size: 1.17rem;
     font-weight: 300;
   }
@@ -60,7 +57,7 @@ ol {
 
 .step {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .restaurants {
@@ -90,11 +87,12 @@ ol {
 .menu {
   &__heading {
     font-family: $display-font-family;
+    font-weight: normal;
     font-size: 1.62rem;
   }
 
   &__course-heading {
-    font-size: 1.07rem;
+    font-size: 1rem;
     font-weight: 300;
     text-transform: uppercase;
   }
@@ -125,6 +123,7 @@ ol {
 .footer {
   &__heading {
     font-family: $display-font-family;
+    font-weight: normal;
     font-size: 1.25rem;
     line-height: 2.75rem;
   }

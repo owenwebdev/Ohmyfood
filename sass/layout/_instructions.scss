@@ -1,10 +1,8 @@
 @use "../abstracts/colors";
 
-@use "../components/step";
-
 .instructions {
   //   height: 27.5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background: colors.$background1;
+  background-color: colors.$background1;
 }

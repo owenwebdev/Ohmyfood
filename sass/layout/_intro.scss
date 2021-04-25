@@ -1,7 +1,5 @@
 // _intro
 
-// @use "../base/typography";
-
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
@@ -13,16 +11,16 @@
     background-color: colors.$background2;
 
     &__heading {
-        // @include typography.intro-heading;
         margin-bottom: 2.5rem;
     }
     
-    &__subheading {
+    &__info {
         margin-bottom: 2.5rem;
     }
 
     &__explore {
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
         @include mixins.capsule(13.5rem, 3rem, colors.$gradient-secondary-primary);
     }
 }
