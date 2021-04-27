@@ -1,3 +1,7 @@
+/**
+ * _typography.scss
+ */
+
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
@@ -9,7 +13,7 @@ html {
 }
 
 a {
-  color: unset;
+  color: unset; // Remove browser's default color
   text-decoration: none; // Remove underline
 }
 
@@ -125,7 +129,6 @@ ol {
     font-family: $display-font-family;
     font-weight: normal;
     font-size: 1.25rem;
-    line-height: 2.75rem;
   }
 
   &__link {

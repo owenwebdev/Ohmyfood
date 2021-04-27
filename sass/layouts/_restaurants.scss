@@ -1,4 +1,6 @@
-// _restaurant.scss
+/**
+ * _restaurants.scss
+ */
 
 @use "../abstracts/colors";
 @use "../abstracts/variables";
@@ -12,6 +14,14 @@ $padding-top: 3rem;
 
 .restaurants {
   padding-top: $padding-top;
-  padding-bottom: 2.75rem;
+  padding-bottom: 3rem;
   background-color: colors.$background2;
+
+  &__heading {
+    margin-bottom: 1.25rem;
+  }
+
+  &__item {
+    margin-bottom: 1.25rem;
+  }
 }

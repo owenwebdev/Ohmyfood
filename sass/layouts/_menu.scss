@@ -1,12 +1,14 @@
-// _menu.scss
+/**
+ * _menu.scss
+ */
 
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
 .menu {
   border-radius: 2.5rem 2.5rem 0 0;
-  position: relative;
-  margin-top: -2.5rem;
+  margin-top: -2.5rem; // make top of menu overlap bottom of photo
+  position: relative; // required for overlap to be rendered
   padding-top: 2rem;
   padding-bottom: 4rem;
   background-color: colors.$background2;
@@ -44,14 +46,49 @@
     }
   }
 
-  &__dishes {
+  &__list {
     margin-left: -0.5rem;
     margin-right: -0.5rem;
+  }
+
+  &__item {
+    margin-bottom: 1rem;
   }
 
   &__order {
     margin-left: auto;
     margin-right: auto;
     @include mixins.capsule(11.5rem, 3rem, colors.$gradient-secondary-primary);
+  }
+}
+
+.menu {
+  $overall-duration: 1.25s;
+  $timing-function: ease-in-out;
+  @for $i from 1 through 4 {
+    &__item:nth-of-type(#{$i}) {
+      $delay: 200ms * $i;
+      $duration: $overall-duration - $delay;
+      animation: fade-in $duration $delay $timing-function backwards,
+        slide-up $duration $delay $timing-function backwards;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(1rem);
+  }
+  100% {
+    transform: translateY(0rem);
   }
 }

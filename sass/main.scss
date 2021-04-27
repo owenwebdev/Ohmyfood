@@ -1,5 +1,7 @@
-@use "base/reset";
-@use "base/typography";
+/**
+ * _main.scss
+ */
 
-@use "pages/index.scss";
-@use "pages/restaurant-page.scss";
+@use "base";
+@use "components";
+@use "layouts";

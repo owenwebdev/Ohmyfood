@@ -14,11 +14,20 @@
   </head>
 
   <body>
+
+    <div class="hider">
+      <div class="hider__child"></div>
+      <div class="hider__child"></div>
+      <div class="hider__child"></div>
+      <div class="hider__child"></div>
+    </div>
+
     <header class="header">
       <!-- <img class="header__logo" src="images/logo/ohmyfood@2x.svg" alt="logo" /> -->
       <a href="#"><h1 class="header__heading">ohmyfood</h1></a>
     </header>
 
+    <!-- <main  class="fade-in"> -->
     <main>
       <section class="user-location">
         <div class="wrapper">
@@ -46,25 +55,31 @@
         <div class="wrapper">
           <h2 class="instructions__heading">How it works</h2>
           <ol class="instructions__list">
-            <li class="step">
-              <div class="step__content">
-                <div class="step__marker">1</div>
-                <div class="step__icon fas fa-mobile-alt"></div>
-                <div>Choose a restaurant</div>
+            <li class="instructions__item">
+              <div class="step">
+                <div class="step__content">
+                  <div class="step__marker">1</div>
+                  <div class="step__icon fas fa-mobile-alt"></div>
+                  <div>Choose a restaurant</div>
+                </div>
               </div>
             </li>
-            <li class="step">
-              <div class="step__content">
-                <div class="step__marker">2</div>
-                <div class="step__icon fas fa-list"></div>
-                <div>Create your menu</div>
+            <li class="instructions__item">
+              <div class="step">
+                <div class="step__content">
+                  <div class="step__marker">2</div>
+                  <div class="step__icon fas fa-list"></div>
+                  <div>Create your menu</div>
+                </div>
               </div>
             </li>
-            <li class="step step--highlighted">
-              <div class="step__content">
-                <div class="step__marker">3</div>
-                <div class="step__icon fas fa-store"></div>
-                <div>Go enjoy it at the restaurant</div>
+            <li class="instructions__item">
+              <div class="step step--highlighted">
+                <div class="step__content">
+                  <div class="step__marker">3</div>
+                  <div class="step__icon fas fa-store"></div>
+                  <div>Go enjoy it at the restaurant</div>
+                </div>
               </div>
             </li>
           </ol>
@@ -75,8 +90,8 @@
         <div class="wrapper">
           <div id="restaurants-href"></div>
           <h2 class="restaurants__heading">Restaurants</h2>
-          <ul>
-            <li>
+          <ul class="restaurants__list">
+            <li class="restaurants__item">
               <a class="restaurants__link" href="full-palette.html">
                 <div class="restaurant">
                   <div class="restaurant__photo">
@@ -98,7 +113,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="restaurants__item">
               <a class="restaurants__link" href="enchanted-plate.html">
                 <div class="restaurant">
                   <div class="restaurant__photo">
@@ -120,7 +135,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="restaurants__item">
               <a class="restaurants__link" href="bastille.html">
                 <div class="restaurant">
                   <div class="restaurant__photo">
@@ -141,7 +156,7 @@
                 </div>
               </a>
             </li>
-            <li>
+            <li class="restaurants__item">
               <a class="restaurants__link" href="le-gourmand.html">
                 <div class="restaurant">
                   <div class="restaurant__photo">
@@ -170,23 +185,23 @@
     <footer class="footer">
       <div class="wrapper">
         <div class="footer__heading">ohmyfood</div>
-        <ul class="footer__links">
-          <li>
+        <ul class="footer__list">
+          <li class="footer__item">
             <a class="footer__link" href="#"
               ><span class="footer__link-icon fas fa-utensils"></span>Suggest a
               restaurant</a
             >
           </li>
-          <li>
+          <li class="footer__item">
             <a class="footer__link" href="#">
               <span class="footer__link-icon fas fa-hands-helping"></span>Become
               a partner</a
             >
           </li>
-          <li>
+          <li class="footer__item">
             <a class="footer__link" href="#">Legal</a>
           </li>
-          <li>
+          <li class="footer__item">
             <a class="footer__link" href="#">Contact</a>
           </li>
         </ul>

@@ -1,14 +1,12 @@
 /**
-*   _dish.scss
-*/
+ * _dish.scss
+ */
 
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
 
 .dish {
   height: 4.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
   overflow: hidden;
   background-color: colors.$background1;
   @include mixins.rounded-corners;

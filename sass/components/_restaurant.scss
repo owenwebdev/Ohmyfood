@@ -1,12 +1,13 @@
+/**
+ * _restaurant.scss
+ */
+
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
-@use "../abstracts/utilities";
 
 .restaurant {
   display: grid;
   height: 15.5rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
   grid-template-areas:
     "photo photo"
     "title fav"
@@ -45,12 +46,6 @@
     grid-area: fav;
     align-self: center;
     justify-self: center;
-    // font-size: 1.5rem;
-    // color: colors.$logo;
-
-  //   & > .overlay {
-  //     @include mixins.overlay(colors.$gradient-secondary-primary);
-  //   }
   }
 
   &__label {

@@ -1,8 +1,19 @@
+/**
+ * _instructions.scss
+ */
+
 @use "../abstracts/colors";
 
 .instructions {
-  //   height: 27.5rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: colors.$background1;
+
+  &__heading {
+    margin-bottom: 1.25rem;
+  }
+
+  &__item {
+    margin-bottom: 1.25rem;
+  }
 }

@@ -1,4 +1,6 @@
-@use "sass:color";
+/**
+ * _colors.scss
+ */
 
 $primary: #9356dc;
 $secondary: #ff79da;
@@ -13,12 +15,3 @@ $background4: $logo;
 
 $gradient-primary-secondary: linear-gradient($primary, $secondary);
 $gradient-secondary-primary: linear-gradient($secondary, $primary);
-
-@function max-contrast($color) {
-  // if $color is dark then return white
-  // else return black
-  @if (color.lightness($color) < 50%) {
-    @return #fff;
-  }
-  @return #000;
-}

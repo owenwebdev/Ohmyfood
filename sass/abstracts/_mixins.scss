@@ -1,21 +1,21 @@
-// _mixins.scss
-
-@use "../abstracts/colors";
+/**
+ * _mixins.scss
+ */
 
 @mixin shadow-soft-light {
   box-shadow: 0 0.375rem 0.5rem 0 rgba(0 0 0 / 10%);
 }
 
 @mixin shadow-soft-medium {
-    box-shadow: 0 0.375rem 0.5rem 0.1rem rgba(0 0 0 / 20%);
+  box-shadow: 0 0.375rem 0.5rem 0.1rem rgba(0 0 0 / 20%);
 }
 
 @mixin shadow-soft-dark {
-    box-shadow: 0 0.375rem 0.5rem 0.2rem rgba(0 0 0 / 30%);
+  box-shadow: 0 0.375rem 0.5rem 0.2rem rgba(0 0 0 / 30%);
 }
-  
+
 @mixin shadow-hard {
-    box-shadow: 0 0.125rem 0.25rem 0 rgba(0 0 0 / 20%);
+  box-shadow: 0 0.125rem 0.25rem 0 rgba(0 0 0 / 20%);
 }
 
 @mixin rounded-corners($radius: 1rem) {
@@ -35,18 +35,18 @@
 }
 
 @mixin capsule($width, $height, $background-image) {
-    @include flex-center;
-    width: $width;
-    height: $height;
-    border-radius: $height / 2;
-    color: #fff;
-    background-image: $background-image;
-    @include shadow-soft-light;
-    transition: all 350ms;
-    
-    &:hover {
-        @include shadow-soft-medium;
-    }
+  @include flex-center;
+  width: $width;
+  height: $height;
+  border-radius: $height / 2;
+  color: #fff;
+  background-image: $background-image;
+  @include shadow-soft-light;
+  transition: all 350ms;
+
+  &:hover {
+    @include shadow-soft-medium;
+  }
 }
 
 @mixin text-overlay($background-image) {
