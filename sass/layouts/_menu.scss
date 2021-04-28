@@ -4,6 +4,7 @@
 
 @use "../abstracts/colors";
 @use "../abstracts/mixins";
+@use "../abstracts/variables";
 
 .menu {
   border-radius: 2.5rem 2.5rem 0 0;
@@ -14,9 +15,7 @@
   background-color: colors.$background2;
 
   &__intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include mixins.flex-between;
     margin-bottom: 2rem;
     margin-right: -0.75rem;
   }
@@ -62,20 +61,21 @@
   }
 }
 
+// animation
 .menu {
-  $overall-duration: 1.25s;
+  $overall-duration: variables.$menu-load-duration;
   $timing-function: ease-in-out;
   @for $i from 1 through 4 {
     &__item:nth-of-type(#{$i}) {
       $delay: 200ms * $i;
       $duration: $overall-duration - $delay;
-      animation: fade-in $duration $delay $timing-function backwards,
-        slide-up $duration $delay $timing-function backwards;
+      animation: item-fade-in $duration $delay $timing-function backwards,
+        item-slide-up $duration $delay $timing-function backwards;
     }
   }
 }
 
-@keyframes fade-in {
+@keyframes item-fade-in {
   0% {
     opacity: 0%;
   }
@@ -84,7 +84,7 @@
   }
 }
 
-@keyframes slide-up {
+@keyframes item-slide-up {
   0% {
     transform: translateY(1rem);
   }

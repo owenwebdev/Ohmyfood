@@ -1,0 +1,55 @@
+/**
+ * _spinner.scss
+ */
+
+@use "sass:list";
+
+@use "../abstracts/colors";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
+.spinner {
+  $duration: variables.$home-load-duration;
+  $colors: (colors.$primary, colors.$secondary, colors.$tertiary);
+  $number-of-children: 3;
+
+  &__child {
+    position: absolute;
+    $max-radius: 10vmin;
+    $ring-width: 2vmin;
+    $ring-gap: 0.5vmin;
+    $pulse-duration: 1s;
+    $pulse-stagger: 0.1s;
+
+    @for $i from 1 through $number-of-children {
+      &:nth-of-type(#{$i}) {
+        $radius: $max-radius -
+          (($number-of-children - $i) * ($ring-width + $ring-gap));
+        top: calc(50% - #{$radius});
+        left: calc(50% - #{$radius});
+        @include mixins.circle($radius * 2);
+        $colors-index: (($i - 1) % list.length($colors)) + 1;
+        $ring-color: list.nth($colors, $colors-index);
+        border: $ring-width solid $ring-color;
+        $delay: $i * $pulse-stagger;
+        $iterations: $duration / $pulse-duration;
+        animation: pulse-opacity
+          $pulse-duration
+          $delay
+          cubic-bezier(0.5, 0, 0, 1.333)
+          both
+          $iterations;
+      }
+    }
+  }
+}
+
+@keyframes pulse-opacity {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}

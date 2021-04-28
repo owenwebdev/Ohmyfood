@@ -231,63 +231,21 @@ ol {
 }
 
 /**
+ * _variables.scss
+ */
+/**
  * _hider.scss
  */
 .hider {
-  position: fixed;
-  z-index: 2000;
   height: 100vh;
   width: 100vw;
+  position: fixed;
+  z-index: 2000;
   background-color: #fff;
+}
+
+.hider {
   animation: fade-out 0.5s 2.5s forwards, shrink-to-zero 0s 3s forwards;
-}
-.hider__child:nth-of-type(1) {
-  position: absolute;
-  top: calc(50vh - 10vmin);
-  left: calc(50vw - 10vmin);
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 50%;
-  border: 2vmin solid transparent;
-  border-top-color: #99e2d0;
-  border-right-color: #ff79da;
-  animation: grow-spin 3s 1800ms cubic-bezier(0.11, 0, 0.5, 0) both;
-}
-.hider__child:nth-of-type(2) {
-  position: absolute;
-  top: calc(50vh - 10vmin);
-  left: calc(50vw - 10vmin);
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 50%;
-  border: 2vmin solid transparent;
-  border-top-color: #9356dc;
-  border-right-color: #99e2d0;
-  animation: grow-spin 3s 1200ms cubic-bezier(0.11, 0, 0.5, 0) both;
-}
-.hider__child:nth-of-type(3) {
-  position: absolute;
-  top: calc(50vh - 10vmin);
-  left: calc(50vw - 10vmin);
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 50%;
-  border: 2vmin solid transparent;
-  border-top-color: #ff79da;
-  border-right-color: #9356dc;
-  animation: grow-spin 3s 600ms cubic-bezier(0.11, 0, 0.5, 0) both;
-}
-.hider__child:nth-of-type(4) {
-  position: absolute;
-  top: calc(50vh - 10vmin);
-  left: calc(50vw - 10vmin);
-  width: 20vmin;
-  height: 20vmin;
-  border-radius: 50%;
-  border: 2vmin solid transparent;
-  border-top-color: #99e2d0;
-  border-right-color: #ff79da;
-  animation: grow-spin 3s 0ms cubic-bezier(0.11, 0, 0.5, 0) both;
 }
 
 @keyframes fade-out {
@@ -298,14 +256,6 @@ ol {
 @keyframes shrink-to-zero {
   100% {
     transform: scale(0);
-  }
-}
-@keyframes grow-spin {
-  0% {
-    transform: scale(0) rotate(0);
-  }
-  100% {
-    transform: scale(1) rotate(540deg);
   }
 }
 /**
@@ -360,6 +310,48 @@ ol {
   border-radius: 0.2rem;
 }
 
+/**
+ * _spinner.scss
+ */
+.spinner__child {
+  position: absolute;
+}
+.spinner__child:nth-of-type(1) {
+  top: calc(50% - 5vmin);
+  left: calc(50% - 5vmin);
+  width: 10vmin;
+  height: 10vmin;
+  border-radius: 50%;
+  border: 2vmin solid #9356dc;
+  animation: pulse-opacity 1s 0.1s cubic-bezier(0.5, 0, 0, 1.333) both 3;
+}
+.spinner__child:nth-of-type(2) {
+  top: calc(50% - 7.5vmin);
+  left: calc(50% - 7.5vmin);
+  width: 15vmin;
+  height: 15vmin;
+  border-radius: 50%;
+  border: 2vmin solid #ff79da;
+  animation: pulse-opacity 1s 0.2s cubic-bezier(0.5, 0, 0, 1.333) both 3;
+}
+.spinner__child:nth-of-type(3) {
+  top: calc(50% - 10vmin);
+  left: calc(50% - 10vmin);
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 50%;
+  border: 2vmin solid #99e2d0;
+  animation: pulse-opacity 1s 0.3s cubic-bezier(0.5, 0, 0, 1.333) both 3;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
 /**
  * _step.scss
  */
@@ -419,9 +411,6 @@ ol {
   font-size: 0.9rem;
 }
 
-/**
- * _variables.scss
- */
 /**
  * _header.scss
  */
@@ -559,19 +548,19 @@ ol {
 }
 
 .menu__item:nth-of-type(1) {
-  animation: fade-in 1.05s 200ms ease-in-out backwards, slide-up 1.05s 200ms ease-in-out backwards;
+  animation: item-fade-in 1.05s 200ms ease-in-out backwards, item-slide-up 1.05s 200ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(2) {
-  animation: fade-in 0.85s 400ms ease-in-out backwards, slide-up 0.85s 400ms ease-in-out backwards;
+  animation: item-fade-in 0.85s 400ms ease-in-out backwards, item-slide-up 0.85s 400ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(3) {
-  animation: fade-in 0.65s 600ms ease-in-out backwards, slide-up 0.65s 600ms ease-in-out backwards;
+  animation: item-fade-in 0.65s 600ms ease-in-out backwards, item-slide-up 0.65s 600ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(4) {
-  animation: fade-in 0.45s 800ms ease-in-out backwards, slide-up 0.45s 800ms ease-in-out backwards;
+  animation: item-fade-in 0.45s 800ms ease-in-out backwards, item-slide-up 0.45s 800ms ease-in-out backwards;
 }
 
-@keyframes fade-in {
+@keyframes item-fade-in {
   0% {
     opacity: 0%;
   }
@@ -579,7 +568,7 @@ ol {
     opacity: 100%;
   }
 }
-@keyframes slide-up {
+@keyframes item-slide-up {
   0% {
     transform: translateY(1rem);
   }
@@ -618,7 +607,7 @@ ol {
  * _user-location.scss
  */
 .user-location {
-  height: 3rem;
+  height: 3.25rem;
   background-color: #eaeaea;
 }
 .user-location__content {
