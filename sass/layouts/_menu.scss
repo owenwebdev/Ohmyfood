@@ -69,13 +69,13 @@
     &__item:nth-of-type(#{$i}) {
       $delay: 200ms * $i;
       $duration: $overall-duration - $delay;
-      animation: item-fade-in $duration $delay $timing-function backwards,
-        item-slide-up $duration $delay $timing-function backwards;
+      animation: fade-in $duration $delay $timing-function backwards,
+        slide-in $duration $delay $timing-function backwards;
     }
   }
 }
 
-@keyframes item-fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0%;
   }
@@ -84,7 +84,7 @@
   }
 }
 
-@keyframes item-slide-up {
+@keyframes slide-in {
   0% {
     transform: translateY(1rem);
   }

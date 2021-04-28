@@ -548,19 +548,19 @@ ol {
 }
 
 .menu__item:nth-of-type(1) {
-  animation: item-fade-in 1.05s 200ms ease-in-out backwards, item-slide-up 1.05s 200ms ease-in-out backwards;
+  animation: fade-in 1.05s 200ms ease-in-out backwards, slide-in 1.05s 200ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(2) {
-  animation: item-fade-in 0.85s 400ms ease-in-out backwards, item-slide-up 0.85s 400ms ease-in-out backwards;
+  animation: fade-in 0.85s 400ms ease-in-out backwards, slide-in 0.85s 400ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(3) {
-  animation: item-fade-in 0.65s 600ms ease-in-out backwards, item-slide-up 0.65s 600ms ease-in-out backwards;
+  animation: fade-in 0.65s 600ms ease-in-out backwards, slide-in 0.65s 600ms ease-in-out backwards;
 }
 .menu__item:nth-of-type(4) {
-  animation: item-fade-in 0.45s 800ms ease-in-out backwards, item-slide-up 0.45s 800ms ease-in-out backwards;
+  animation: fade-in 0.45s 800ms ease-in-out backwards, slide-in 0.45s 800ms ease-in-out backwards;
 }
 
-@keyframes item-fade-in {
+@keyframes fade-in {
   0% {
     opacity: 0%;
   }
@@ -568,7 +568,7 @@ ol {
     opacity: 100%;
   }
 }
-@keyframes item-slide-up {
+@keyframes slide-in {
   0% {
     transform: translateY(1rem);
   }
