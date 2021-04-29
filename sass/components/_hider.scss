@@ -3,6 +3,7 @@
  */
 
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 @use "../abstracts/variables";
 
 .hider {
@@ -11,6 +12,7 @@
   position: fixed;
   z-index: 2000;
   background-color: colors.$background1;
+  @include mixins.flex-center;
 }
 
 //animation

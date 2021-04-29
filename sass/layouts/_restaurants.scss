@@ -3,6 +3,7 @@
  */
 
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 @use "../abstracts/variables";
 
 $padding-top: 3rem;
@@ -13,15 +14,28 @@ $padding-top: 3rem;
 }
 
 .restaurants {
+  $item-gap: 1.25rem;
   padding-top: $padding-top;
   padding-bottom: 3rem;
   background-color: colors.$background2;
 
   &__heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: $item-gap;
+  }
+
+  &__list {
+    @include mixins.breakpoint($name: "medium") {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: $item-gap;
+    }
+
+    @include mixins.breakpoint($name: "huge") {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
   }
 
   &__item {
-    margin-bottom: 1.25rem;
+    margin-bottom: $item-gap;
   }
 }

@@ -2,6 +2,16 @@
  * _mixins.scss
  */
 
+@use "sass:map";
+
+@use "../abstracts/variables";
+
+@mixin breakpoint($name) {
+  @media screen and #{map.get(variables.$breakpoints, $name)} {
+    @content;
+  }
+}
+
 @mixin shadow-soft-light {
   box-shadow: 0 0.375rem 0.5rem 0 rgba(0 0 0 / 10%);
 }

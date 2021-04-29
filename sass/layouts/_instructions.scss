@@ -3,17 +3,27 @@
  */
 
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 
 .instructions {
+  $item-gap: 1.25rem;
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: colors.$background1;
 
   &__heading {
-    margin-bottom: 1.25rem;
+    margin-bottom: $item-gap;
   }
 
+  &__list {
+    @include mixins.breakpoint($name: "medium") {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: $item-gap;
+    }
+  }
+  
   &__item {
-    margin-bottom: 1.25rem;
+    margin-bottom: $item-gap;
   }
 }

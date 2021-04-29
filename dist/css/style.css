@@ -142,6 +142,9 @@ ol {
  * _colors.scss
  */
 /**
+ * _variables.scss
+ */
+/**
  * _mixins.scss
  */
 /**
@@ -231,9 +234,6 @@ ol {
 }
 
 /**
- * _variables.scss
- */
-/**
  * _hider.scss
  */
 .hider {
@@ -242,6 +242,9 @@ ol {
   position: fixed;
   z-index: 2000;
   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hider {
@@ -266,7 +269,7 @@ ol {
   height: 15.5rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
   grid-template-columns: 1fr 3.5rem;
-  grid-template-rows: minmax(0, 1fr) 2.4rem 2.35rem;
+  grid-template-rows: minmax(0, 1fr) 2.3rem 2.45rem;
   overflow: hidden;
   position: relative;
   background-color: #fff;
@@ -313,12 +316,15 @@ ol {
 /**
  * _spinner.scss
  */
+.spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .spinner__child {
   position: absolute;
 }
 .spinner__child:nth-of-type(1) {
-  top: calc(50% - 5vmin);
-  left: calc(50% - 5vmin);
   width: 10vmin;
   height: 10vmin;
   border-radius: 50%;
@@ -326,8 +332,6 @@ ol {
   animation: pulse-opacity 1s 0.1s cubic-bezier(0.5, 0, 0, 1.333) both 3;
 }
 .spinner__child:nth-of-type(2) {
-  top: calc(50% - 7.5vmin);
-  left: calc(50% - 7.5vmin);
   width: 15vmin;
   height: 15vmin;
   border-radius: 50%;
@@ -335,8 +339,6 @@ ol {
   animation: pulse-opacity 1s 0.2s cubic-bezier(0.5, 0, 0, 1.333) both 3;
 }
 .spinner__child:nth-of-type(3) {
-  top: calc(50% - 10vmin);
-  left: calc(50% - 10vmin);
   width: 20vmin;
   height: 20vmin;
   border-radius: 50%;
@@ -388,9 +390,9 @@ ol {
   background-color: #9356dc;
 }
 .step__icon {
+  width: 3.5rem;
   text-align: center;
-  width: 4rem;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: var(--icon-color);
 }
 
@@ -403,8 +405,31 @@ ol {
   background-color: #353535;
   color: #fff;
 }
+@media screen and (min-width: 90rem) {
+  .footer__content {
+    display: flex;
+  }
+}
 .footer__heading {
   margin-bottom: 0.5rem;
+  margin-right: 14rem;
+}
+@media screen and (min-width: 90rem) {
+  .footer__heading {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .footer__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .footer__list {
+    flex: 1 1 auto;
+  }
 }
 .footer__link-icon {
   width: 1.75rem;
@@ -446,6 +471,13 @@ ol {
 }
 .instructions__heading {
   margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .instructions__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.25rem;
+  }
 }
 .instructions__item {
   margin-bottom: 1.25rem;
@@ -507,6 +539,13 @@ ol {
 }
 .menu__courses {
   margin-bottom: 3rem;
+}
+@media screen and (min-width: 90rem) {
+  .menu__courses {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+  }
 }
 .menu__course {
   margin-bottom: 2.5rem;
@@ -599,6 +638,18 @@ ol {
 .restaurants__heading {
   margin-bottom: 1.25rem;
 }
+@media screen and (min-width: 48rem) {
+  .restaurants__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1.25rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .restaurants__list {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 .restaurants__item {
   margin-bottom: 1.25rem;
 }
@@ -633,6 +684,18 @@ ol {
   margin-right: auto;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+@media screen and (min-width: 48rem) {
+  .wrapper {
+    max-width: 48rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .wrapper {
+    max-width: 90rem;
+  }
 }
 
 /**

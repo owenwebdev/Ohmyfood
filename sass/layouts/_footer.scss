@@ -3,6 +3,7 @@
  */
 
 @use "../abstracts/colors";
+@use "../abstracts/mixins";
 
 .footer {
   padding-top: 1.25rem;
@@ -10,8 +11,31 @@
   background-color: colors.$background4;
   color: #fff;
 
+  &__content {
+    @include mixins.breakpoint("huge") {
+      // @include mixins.flex-between;
+      display: flex;
+    }
+  }
+
   &__heading {
     margin-bottom: 0.5rem;
+    margin-right: 14rem;
+
+
+    @include mixins.breakpoint("huge") {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list {
+    @include mixins.breakpoint("medium") {
+      @include mixins.flex-between;
+    }
+
+    @include mixins.breakpoint("huge") {
+      flex: 1 1 auto;
+    }
   }
 
   &__link-icon {

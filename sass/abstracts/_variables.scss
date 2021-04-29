@@ -2,11 +2,18 @@
  * _variables.scss
  */
 
+// $breakpoints: (
+//   "small": "(min-width: 320px)",
+//   "medium": "(min-width: 768px)", // 800
+//   "large": "(min-width: 1024px)", // 1000 992
+//   "huge": "(min-width: 1440px)",  // 1200 1200
+// );
+
 $breakpoints: (
-  "small": "(min-width: 320px)",
-  "medium": "(min-width: 800px)",
-  "large": "(min-width: 1000px)",
-  "huge": "(min-width: 1200px)",
+  "small": "(min-width: 20rem)",
+  "medium": "(min-width: 48rem)",
+  "large": "(min-width: 64rem)",
+  "huge": "(min-width: 90rem)",
 );
 
 $header-height: 4rem;

@@ -26,6 +26,12 @@
 
   &__courses {
     margin-bottom: 3rem;
+
+    @include mixins.breakpoint("huge") {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 4rem;
+    }
   }
 
   &__course {
