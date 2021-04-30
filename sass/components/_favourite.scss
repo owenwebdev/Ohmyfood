@@ -6,7 +6,6 @@
 @use "../abstracts/mixins";
 
 .favourite {
-  width: fit-content;
   font-size: 1.5rem;
 
   &__unchecked {

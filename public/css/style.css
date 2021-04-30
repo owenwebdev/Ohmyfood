@@ -1,7 +1,7 @@
 /**
  * _typography.scss
  */
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 /**
  * _reset.scss
@@ -62,10 +62,13 @@ ol {
   font-weight: 400;
 }
 
-.intro__heading {
+.intro__heading,
+.instructions__heading,
+.restaurants__heading {
   font-size: 1.5rem;
   font-weight: 700;
 }
+
 .intro__info {
   font-size: 1.17rem;
   font-weight: 300;
@@ -75,19 +78,9 @@ ol {
   font-weight: 400;
 }
 
-.instructions__heading {
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.step {
+.step__content {
   font-size: 1rem;
   font-weight: 500;
-}
-
-.restaurants__heading {
-  font-size: 1.5rem;
-  font-weight: 700;
 }
 
 .restaurant__title {
@@ -230,7 +223,6 @@ ol {
  * _favourite.scss
  */
 .favourite {
-  width: fit-content;
   font-size: 1.5rem;
 }
 .favourite__unchecked {
@@ -285,7 +277,7 @@ ol {
   display: grid;
   height: 15.5rem;
   grid-template-areas: "photo photo" "title fav" "info fav";
-  grid-template-columns: 1fr 3.5rem;
+  grid-template-columns: 1fr 3rem;
   grid-template-rows: minmax(0, 1fr) 2.3rem 2.45rem;
   column-gap: 0.75rem;
   overflow: hidden;
@@ -319,7 +311,6 @@ ol {
 .restaurant__favourite {
   grid-area: fav;
   align-self: center;
-  justify-self: center;
 }
 .restaurant__label {
   position: absolute;
@@ -547,21 +538,17 @@ ol {
   background-color: #f6f6f6;
 }
 .menu__intro {
-  display: grid;
-  grid-template-areas: "title fav";
-  grid-template-columns: 1fr 3.5rem;
-  column-gap: 1rem;
+  display: flex;
   margin-bottom: 2rem;
   margin-right: -1rem;
 }
 .menu__title {
-  grid-area: title;
+  flex: 1;
+  padding-right: 1.5rem;
   color: #353535;
 }
 .menu__favourite {
-  grid-area: fav;
   align-self: center;
-  justify-self: center;
 }
 .menu__courses {
   display: grid;
