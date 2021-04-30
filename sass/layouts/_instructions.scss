@@ -6,24 +6,21 @@
 @use "../abstracts/mixins";
 
 .instructions {
-  $item-gap: 1.25rem;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   background-color: colors.$background1;
 
   &__heading {
-    margin-bottom: $item-gap;
+    margin-bottom: 1.25rem;
   }
 
   &__list {
-    @include mixins.breakpoint($name: "medium") {
-      display: grid;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+
+    @include mixins.breakpoint("medium") {
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: $item-gap;
     }
-  }
-  
-  &__item {
-    margin-bottom: $item-gap;
   }
 }

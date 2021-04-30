@@ -77,3 +77,16 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+
+// @mixin aspect-ratio-container($width: 1, $height: 1) {
+//     padding-top: $height / $width * 100%;
+//     position: relative;
+// }
+
+// @mixin aspect-ratio-content {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   right: 0;
+// }

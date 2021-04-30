@@ -15,27 +15,35 @@
   background-color: colors.$background2;
 
   &__intro {
-    @include mixins.flex-between;
+    display: grid;
+    grid-template-areas: "title fav";
+    grid-template-columns: 1fr 3.5rem;
+    column-gap: 1rem;
     margin-bottom: 2rem;
-    margin-right: -0.75rem;
+    margin-right: -1rem;
   }
 
-  &__heading {
+  &__title {
+    grid-area: title;
     color: colors.$logo;
   }
 
+  &__favourite {
+    grid-area: fav;
+    align-self: center;
+    justify-self: center;
+  }
+
   &__courses {
+    display: grid;
+    column-gap: 4rem;
+    row-gap: 2.5rem;
+    grid-template-columns: 1fr;
     margin-bottom: 3rem;
 
     @include mixins.breakpoint("huge") {
-      display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 4rem;
     }
-  }
-
-  &__course {
-    margin-bottom: 2.5rem;
   }
 
   &__course-heading {
@@ -52,12 +60,11 @@
   }
 
   &__list {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
     margin-left: -0.5rem;
     margin-right: -0.5rem;
-  }
-
-  &__item {
-    margin-bottom: 1rem;
   }
 
   &__order {
@@ -71,6 +78,7 @@
 .menu {
   $overall-duration: variables.$menu-load-duration;
   $timing-function: ease-in-out;
+  
   @for $i from 1 through 4 {
     &__item:nth-of-type(#{$i}) {
       $delay: 200ms * $i;

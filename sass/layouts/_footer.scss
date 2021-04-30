@@ -13,18 +13,16 @@
 
   &__content {
     @include mixins.breakpoint("huge") {
-      // @include mixins.flex-between;
       display: flex;
     }
   }
 
   &__heading {
     margin-bottom: 0.5rem;
-    margin-right: 14rem;
-
 
     @include mixins.breakpoint("huge") {
       margin-bottom: 0;
+      margin-right: 14rem;
     }
   }
 

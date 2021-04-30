@@ -12,13 +12,13 @@
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 
-  @include mixins.breakpoint($name: "medium") {
+  @include mixins.breakpoint("medium") {
     max-width: 48rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  @include mixins.breakpoint($name: "huge") {
+  @include mixins.breakpoint("huge") {
     max-width: 90rem;
   }
 }

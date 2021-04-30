@@ -89,10 +89,11 @@ ol {
 }
 
 .menu {
-  &__heading {
+  &__title {
     font-family: $display-font-family;
     font-weight: normal;
     font-size: 1.62rem;
+    line-height: 1.4;
   }
 
   &__course-heading {

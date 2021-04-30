@@ -14,28 +14,25 @@ $padding-top: 3rem;
 }
 
 .restaurants {
-  $item-gap: 1.25rem;
   padding-top: $padding-top;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
   background-color: colors.$background2;
 
   &__heading {
-    margin-bottom: $item-gap;
+    margin-bottom: 1.25rem;
   }
 
   &__list {
-    @include mixins.breakpoint($name: "medium") {
-      display: grid;
+    display: grid;
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+
+    @include mixins.breakpoint("medium") {
       grid-template-columns: 1fr 1fr;
-      column-gap: $item-gap;
     }
 
-    @include mixins.breakpoint($name: "huge") {
+    @include mixins.breakpoint("huge") {
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-  }
-
-  &__item {
-    margin-bottom: $item-gap;
   }
 }
