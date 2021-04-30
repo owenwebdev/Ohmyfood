@@ -13,7 +13,7 @@
   padding-right: 1.25rem;
 
   @include mixins.breakpoint("medium") {
-    max-width: 48rem;
+    max-width: 60rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }

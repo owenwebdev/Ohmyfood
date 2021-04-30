@@ -18,6 +18,25 @@
   box-sizing: border-box;
 }
 
+/**
+ * _colors.scss
+ */
+/**
+ * _push-down-footer.scss
+ *
+ * Push footer to bottom of view when main has little content.
+ */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f6f6f6;
+}
+
+main {
+  flex: 1;
+}
+
 html {
   font-family: "Roboto", sans-serif;
 }
@@ -139,9 +158,6 @@ ol {
   object-position: center 61%;
 }
 
-/**
- * _colors.scss
- */
 /**
  * _variables.scss
  */
@@ -379,6 +395,7 @@ ol {
   justify-content: center;
   align-items: center;
   margin-left: -0.75rem;
+  padding-right: 1rem;
 }
 .step__marker {
   flex: none;
@@ -388,10 +405,11 @@ ol {
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
-  color: white;
+  color: #fff;
   background-color: #9356dc;
 }
 .step__icon {
+  flex: none;
   width: 3.5rem;
   text-align: center;
   font-size: 1.1rem;
@@ -694,7 +712,7 @@ ol {
 }
 @media screen and (min-width: 48rem) {
   .wrapper {
-    max-width: 48rem;
+    max-width: 60rem;
     padding-left: 2rem;
     padding-right: 2rem;
   }

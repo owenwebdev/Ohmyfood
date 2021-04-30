@@ -1,0 +1,18 @@
+/**
+ * _push-down-footer.scss
+ *
+ * Push footer to bottom of view when main has little content.
+ */
+
+@use "../abstracts/colors";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: colors.$background2;
+}
+
+main {
+  flex: 1; // grow to fill available space
+}
