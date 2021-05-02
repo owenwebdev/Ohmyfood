@@ -13,7 +13,7 @@
 
   &__content {
     @include mixins.breakpoint("huge") {
-      display: flex;
+      @include mixins.flex-between;
     }
   }
 
@@ -22,7 +22,6 @@
 
     @include mixins.breakpoint("huge") {
       margin-bottom: 0;
-      margin-right: 14rem;
     }
   }
 
@@ -32,7 +31,7 @@
     }
 
     @include mixins.breakpoint("huge") {
-      flex: 1 1 auto;
+      display: contents;
     }
   }
 

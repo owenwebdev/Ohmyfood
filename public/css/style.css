@@ -232,8 +232,8 @@ ol {
   position: relative;
   left: -50%;
   background-image: linear-gradient(#ff79da, #9356dc);
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
   opacity: 0%;
   transition: opacity 0.375s;
@@ -419,6 +419,8 @@ ol {
 @media screen and (min-width: 90rem) {
   .footer__content {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 .footer__heading {
@@ -427,7 +429,6 @@ ol {
 @media screen and (min-width: 90rem) {
   .footer__heading {
     margin-bottom: 0;
-    margin-right: 14rem;
   }
 }
 @media screen and (min-width: 48rem) {
@@ -439,7 +440,7 @@ ol {
 }
 @media screen and (min-width: 90rem) {
   .footer__list {
-    flex: 1 1 auto;
+    display: contents;
   }
 }
 .footer__link-icon {

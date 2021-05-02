@@ -67,8 +67,8 @@
 
 @mixin text-overlay($background-image) {
   background-image: $background-image;
-  background-clip: text;
   -webkit-background-clip: text;
+  background-clip: text;
   color: transparent;
 }
 

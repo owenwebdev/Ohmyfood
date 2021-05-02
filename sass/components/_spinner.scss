@@ -20,6 +20,7 @@
     $ring-gap: 0.5vmin;
     $pulse-duration: 1s;
     $pulse-stagger: 0.1s;
+    $iterations: $duration / $pulse-duration;
     position: absolute;
 
     @for $i from 1 through $number-of-children {
@@ -29,7 +30,6 @@
         $colors-index: (($i - 1) % list.length($colors)) + 1;
         $ring-color: list.nth($colors, $colors-index);
         $delay: $i * $pulse-stagger;
-        $iterations: $duration / $pulse-duration;
         @include mixins.circle($radius * 2);
         border: $ring-width solid $ring-color;
         animation: pulse-opacity
