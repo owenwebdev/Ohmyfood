@@ -2,8 +2,8 @@
  * _typography.scss
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 
 $body-font-family: "Roboto", sans-serif;
 $display-font-family: "Shrikhand", cursive;
@@ -41,7 +41,7 @@ $bolder: 700;
 }
 
 .user-location {
-  &__content {
+  &__info {
     font-size: $medium;
     font-weight: $normal;
   }

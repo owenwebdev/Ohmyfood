@@ -7,7 +7,6 @@
 
 .step {
   $marker-radius: 0.75rem;
-  --icon-color: colors.$logo;
   height: 4.5rem;
   width: calc(100% - #{$marker-radius});
   margin-left: $marker-radius;
@@ -16,11 +15,6 @@
   background-color: colors.$background2;
   @include mixins.rounded-corners;
   @include mixins.shadow-soft-light;
-
-  &--highlighted {
-    background-color: colors.$primary-tint;
-    --icon-color: #{colors.$primary};
-  }
 
   &__content {
     @include mixins.flex-center;
@@ -41,6 +35,14 @@
     width: 3.5rem;
     text-align: center;
     font-size: 1.1rem;
-    color: var(--icon-color);
+    color: colors.$logo;
+  }
+
+  &--highlighted {
+    background-color: colors.$primary-tint;
+
+    .step__icon {
+      color: colors.$primary;
+    }
   }
 }
